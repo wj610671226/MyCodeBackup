@@ -1,0 +1,118 @@
+
+annotationArray
+
+- (NSArray *)annotationViewArray { %log; NSArray * r = %orig; HBLogDebug(@" = %@", r); return r; }
+
+annotationViewArray
+
+方法
+- (void)addAnnotationView:(id)arg1 { %log; %orig; }
+
+
+- (void)addAnnotation:(id)arg1 { %log; %orig; }
+
+
+
+选中一个
+- (id)selectedAnnotation { %log; id   r = %orig; HBLogDebug(@" = 0x%x", (unsigned int)r); return r; }
+
+- (void)bringSelectedAnnotationViewToFront { %log; %orig; }
+
+- (BOOL)deselectAnnotation:(id)arg1 animated:(BOOL)arg2 { %log; BOOL r = %orig; HBLogDebug(@" = %d", r); return r; }
+
+
+
+@interface MAUserLocation : MAAnimatedAnnotation
+{
+    BOOL _updating;
+    CLLocation *_location;
+    CLHeading *_heading;
+    CDUnknownBlockType _stepCallback;
+    struct CLLocationCoordinate2D _coordinate;
+}
+
+@property(nonatomic) struct CLLocationCoordinate2D coordinate; // @synthesize coordinate=_coordinate;
+@property(retain, nonatomic) CLHeading *heading; // @synthesize heading=_heading;
+@property(nonatomic, getter=isUpdating) BOOL updating; // @synthesize updating=_updating;
+@property(retain, nonatomic) CLLocation *location; // @synthesize location=_location;
+@property(copy, nonatomic) CDUnknownBlockType stepCallback; // @synthesize stepCallback=_stepCallback;
+- (void)step:(float)arg1;
+
+
+@interface JYNearlyBikeAnnotation : MAPointAnnotation
+{
+    JYAroundBike *_bike;
+}
+
+- (void).cxx_destruct;
+@property(retain, nonatomic) JYAroundBike *bike; // @synthesize bike=_bike;
+- (id)initWith:(id)arg1;
+
+
+
+
+@interface JYAroundBikeAnnotation : MAPointAnnotation
+{
+    JYAroundBike *_bike;
+}
+
+- (void).cxx_destruct;
+@property(retain, nonatomic) JYAroundBike *bike; // @synthesize bike=_bike;
+- (id)initWith:(id)arg1;
+
+
+
+
+@interface MAPointAnnotation : MAShape
+{
+    BOOL _lockedToScreen;
+    struct CGPoint _lockedScreenPoint;
+    struct CLLocationCoordinate2D _coordinate;
+}
+
+@property(nonatomic) struct CLLocationCoordinate2D coordinate; // @synthesize coordinate=_coordinate;
+@property(nonatomic, getter=isLockedToScreen) BOOL lockedToScreen; // @synthesize lockedToScreen=_lockedToScreen;
+@property(nonatomic) struct CGPoint lockedScreenPoint; // @synthesize lockedScreenPoint=_lockedScreenPoint;
+- (void)updateCoordinateWithMapview:(id)arg1;
+
+
+
+
+@interface JYAroundBike : NSObject
+@property(copy, nonatomic) NSString *address; // @synthesize address=_address;
+@property(nonatomic) int bikeCount; // @synthesize bikeCount=_bikeCount;
+@property(copy, nonatomic) NSString *bikeNo; // @synthesize bikeNo=_bikeNo;
+@property(retain, nonatomic) NSNumber *bikeType; // @synthesize bikeType=_bikeType;
+@property(retain, nonatomic) NSString *coverageRange; // @synthesize coverageRange=_coverageRange;
+@property(copy, nonatomic) NSString *iconType; // @synthesize iconType=_iconType;
+@property(retain, nonatomic) NSArray *images; // @synthesize images=_images;
+@property(copy, nonatomic) NSString *lat; // @synthesize lat=_lat;
+@property(copy, nonatomic) NSString *lng; // @synthesize lng=_lng;
+@property(copy, nonatomic) NSString *parkGuid; // @synthesize parkGuid=_parkGuid;
+@property(copy, nonatomic) NSString *parkIcon; // @synthesize parkIcon=_parkIcon;
+@property(copy, nonatomic) NSString *parkIconPlus; // @synthesize parkIconPlus=_parkIconPlus;
+@property(copy, nonatomic) NSString *parkName; // @synthesize parkName=_parkName;
+@property(retain, nonatomic) NSNumber *parkRadius; // @synthesize parkRadius=_parkRadius;
+@property(copy, nonatomic) NSString *parkTip; // @synthesize parkTip=_parkTip;
+@property(retain, nonatomic) NSNumber *parkType; // @synthesize parkType=_parkType;
+@property(copy, nonatomic) NSString *price; // @synthesize price=_price;
+@property(copy, nonatomic) NSString *radius; // @synthesize radius=_radius;
+@property(retain, nonatomic) NSString *thumbnail; // @synthesize thumbnail=_thumbnail;
+@property(copy, nonatomic) NSString *time; // @synthesize time=_time;
+
+
+
+
+
+(lldb) c
+Process 1795 resuming
+(lldb)  po $r0
+<JYAroundBikeAnnoView: 0x17de2520; frame = (237.336 77.6165; 62 69); gestureRecognizers = <NSArray: 0x17d23d40>; layer = <CALayer: 0x17dd6570>>
+
+
+(lldb)  c
+Process 1795 resuming
+
+Command #2 'c' continued the target.
+(lldb)  po $r0
+<JYStartPointAnnoView: 0x1b04f640; frame = (0 0; 0 0); gestureRecognizers = <NSArray: 0x1b064b30>; layer = <CALayer: 0x17cbbb10>>

@@ -1,0 +1,9 @@
+Package: com.yifu.haluo
+Name: HaLuoTweakProject
+Depends: mobilesubstrate
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: wj
+Author: wj
+Section: Tweaks

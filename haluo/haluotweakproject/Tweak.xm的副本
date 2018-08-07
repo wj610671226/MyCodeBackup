@@ -1,0 +1,59 @@
+
+
+
+
+@interface MAAnnotationView : UIView
+@property(readonly, nonatomic) UIImageView *imageView;
+@end
+
+@interface JYAroundBikeAnnoView : MAAnnotationView
+
+@end
+
+@interface MAMapView : UIView
+-(void)changeBikeImage:(JYAroundBikeAnnoView *)arg1;
+@end
+%hook MAMapView
+// 取消选中
+- (void)annotationContainerViewDidDeselectAnnotationView:(JYAroundBikeAnnoView *)arg1 { 
+	%orig;
+	//NSLog(@"annotationContainerViewDidDeselectAnnotationView  arg1 = %@,  class = %@", arg1, [arg1 class]);
+	[self changeBikeImage:arg1];
+}
+
+// 选中
+- (void)annotationContainerViewDidSelectAnnotationView:(JYAroundBikeAnnoView *)arg1 { 
+	%orig;
+	//NSLog(@"annotationContainerViewDidSelectAnnotationView  arg1 = %@,  class = %@", arg1, [arg1 class]);
+    [self changeBikeImage:arg1];
+}
+
+%new
+-(void)changeBikeImage:(JYAroundBikeAnnoView *)arg1 {
+    UIImage * image = [UIImage imageWithContentsOfFile:@"/mv.png"];
+    if (image != nil) {
+        arg1.imageView.image = image;
+    }  else {
+        NSLog(@"image == nil");
+    }
+}
+%end
+
+%hook MAAnnotationContainerView
+- (void)addAnnotationView:(id)arg1 {
+    //NSLog(@"addAnnotationView   arg1 = %@", arg1);
+    //NSLog(@"addAnnotationView   arg1  class = %@", [arg1 class]);
+    // JYAroundBikeAnnoView  JYNearlyBikeAnnoView  CKUserAnnoView
+    if (![arg1 isKindOfClass:[%c(CKUserAnnoView) class]]) {
+        MAAnnotationView * annotationView = (MAAnnotationView *)arg1;
+        UIImage * image = [UIImage imageWithContentsOfFile:@"/mv.png"];
+        if (image != nil) {
+            annotationView.imageView.image = image;
+        }  else {
+            NSLog(@"image == nil");
+        }
+    }
+    %orig;
+}
+%end
+

@@ -1,0 +1,75 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+
+   desc "打包版本"
+# 运行打包命令 fastlane buile_release name:EasyFuture
+  lane :buile_release do |options|
+
+    name = options[:name]
+    # get_certificates           # invokes cert
+    # get_provisioning_profile   # invokes sigh
+    gym(
+      clean:true, # 是否清空以前的编译信息 true：是
+
+      scheme: name, # 自己项目名称
+
+      workspace: "#{name}.xcworkspace", # 自己项目名称xcworkspace（使用cocoapods才会生成）
+
+      export_method:"app-store", #app-store,ad-hoc,enterprise,development
+
+      configuration:"Release",
+
+      output_directory:"./fastlane/release_ipa", # 打包后的 ipa 文件存放的目录
+
+      export_xcargs: "-allowProvisioningUpdates", #访问钥匙串
+
+      output_name: "#{name}.ipa",# ipa 文件名
+
+      silent:true, #隐藏没有必要的信息
+
+      include_bitcode: true,
+      
+      export_options: {
+        provisioningProfiles: {
+          "com.yifu.MyFastLaneDemo" => "MyFastLaneDemo_appStore" # bundleid，打包用的证书名字
+        }
+      }
+    )
+  end
+
+
+  desc "Upload to App Store"
+  lane :upload do |options|
+    deliver( #提交App Store审核
+
+      ipa:"./fastlane/release_ipa/#{options[:name]}.ipa", #ipa路径
+
+      force : false #是否跳过网页审查
+    ) 
+
+  end
+
+
+  # 使用方法 fastlane build_upload name:My
+  desc "build relese ipa and upload to App Store"
+  lane :build_upload do |options|
+  	buile_release(options)
+    upload(options) #提交App Store审核
+  end
+end

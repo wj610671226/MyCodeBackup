@@ -1,0 +1,109 @@
+# The Deliverfile allows you to store various iTunes Connect metadata
+# For more information, check out the docs
+# https://docs.fastlane.tools/actions/deliver/
+
+
+# 根据iTunes Store 信息设置
+
+username "kohxyj@qq.com"  # Apple ID email address
+
+app_identifier("com.yifu.MyFastLaneDemo") # bundle identifier
+
+#ipa("./fastlane/release_ipa/My.ipa") #  如果没有这个选项，只有metadata会被上传 ipa路径
+
+copyright("Sichuan Yifu Times Technology Co., Ltd 2018") #版权信息
+
+submit_for_review(false) #是否提交审核
+
+screenshots_path("./fastlane/screenshots")
+
+price_tier 0 #app 出售价格
+
+trade_representative_contact_information(  #iTunes store 综合信息处信息
+  first_name: "jie", #名
+  last_name: "wang", #姓
+  address_line1: "软件园", #地址
+  address_line2: "",
+  address_line3: "",
+  city_name: "Chengdu", # 城市
+  state: "SICHUAN", # 省
+  country: "China", #国家
+  postal_code: "610000", # 邮编
+  phone_number: "+86 18283606699", # 手机
+  email_address: "2186682180@qq.com", #邮箱
+)
+
+
+app_review_information( # app审核信息
+  first_name: "jie", # 名
+  last_name: "wang", #姓
+  phone_number: "+86 18283606699", #联系信息电话号码
+  email_address: "2186682180@qq.com", #联系信息邮箱
+  demo_user: "12345678",  #审核测试账号
+  demo_password: "1234", # 审核测试密码
+  notes: "备注信息" # iTunes Store 审核信息备注
+)
+
+#提交审核信息:加密, idfa 等
+submission_information({    # 参数参考地址  https://github.com/fastlane/fastlane/blob/master/spaceship/lib/spaceship/tunes/app_submission.rb
+    export_compliance_encryption_updated: false,
+    export_compliance_uses_encryption: false,
+    content_rights_contains_third_party_content: false,
+    add_id_info_uses_idfa: false
+})
+
+
+# 模板参考地址 https://github.com/fastlane/fastlane/blob/master/deliver/assets/example_rating_config.json
+app_rating_config_path "./fastlane/metadata/itunes_rating_config.json" #年龄分级配置
+
+
+name({
+'zh-Hans' => "MyFastLaneDemoTest"  # app名称
+})
+
+description({ #iTunes Store 中描述信息
+  'zh-Hans' => "APP的描述信息,用于APP功能的描述和介绍不能少于10个字符"
+})
+
+release_notes({
+  'zh-Hans' => "第一个版本测试" #这个新版本信息,iTunes Store 新增内容处该填的内容
+})
+
+
+keywords( # 收缩关键词
+  "zh-Hans" => "FastLane, 美女"
+)
+
+promotional_text( # 本地化宣传文本信息介绍
+  "zh-Hans" => "本地化宣传文本信息介绍",
+)
+
+
+support_url({ # 技术支持网址(URL)
+  'zh-Hans' => "http://www.yifushidai.com"
+})
+
+marketing_url({ #营销网址
+  'zh-Hans' => "http://www.yifushidai.com"
+})
+
+privacy_url({
+  'zh-Hans' => "http://www.yifushidai.com"
+})
+
+app_icon('./fastlane/metadata/AppIcon.png') #应用图标
+
+
+primary_category("Utilities") #类别设置  参考网站https://docs.fastlane.tools/actions/upload_to_app_store/#reference
+# primary_first_sub_category "Card"
+# primary_second_sub_category "Casino"
+# 要设置的次要类别 无
+# secondary_category  
+# 设置的次要第一个子类别 无
+# secondary_first_sub_category  
+# 设置的次要第二个子类别 无
+# secondary_second_sub_category
+
+automatic_release true #审核过之后自动发布
+
+
