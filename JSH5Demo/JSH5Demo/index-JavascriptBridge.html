@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+            <title>WebViewJavascriptBridge</title>
+    </head>
+    <body>
+        <h1>WebViewJavascriptBridge</h2>
+        <button onclick="handleCallOCMethodUrl()" style="border: 1px solid black">调用原生方法-拦截url</button>
+    </body>
+</html>
+
+<script>
+    function setupWebViewJavascriptBridge(callback) {
+        if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
+        if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
+        window.WVJBCallbacks = [callback];
+        var WVJBIframe = document.createElement('iframe');
+        WVJBIframe.style.display = 'none';
+        WVJBIframe.src = 'https://__bridge_loaded__';
+        document.documentElement.appendChild(WVJBIframe);
+        setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
+    }
+
+    setupWebViewJavascriptBridge(function(bridge) {
+         bridge.registerHandler('jsMethod', function(data, responseCallback) {
+            console.log("原生传递的参数:", data)
+            responseCallback("js回调的参数")
+        })
+
+     })
+     
+     function handleCallOCMethodUrl() {
+         // js 调用原生的方法
+         WebViewJavascriptBridge.callHandler('nativeMothod', {'js': '传递数据'}, function(response) {
+             alert('原生回调返回的数据:' + response);
+         })
+     }
+</script>

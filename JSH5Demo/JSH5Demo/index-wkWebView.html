@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+            <title>js和原生的相互调用</title>
+    </head>
+    <body>
+        <h1>js和原生的相互调用</h2>
+        <button onclick="handleCallOCMethodUrl()" style="border: 1px solid black">调用原生方法-拦截url</button>
+        <br/>
+        <button onclick="handleCallOCMethodHandler()" style="border: 1px solid black; margin-top: 20px;">调用原生方法-Handler</button>
+    </body>
+</html>
+
+<script>
+    // js调用原生的方法
+    function handleCallOCMethodUrl() {
+        // 方法一：
+        let url = "openVC://test?title=titelData&name=nameData";
+        var iFrame;
+        iFrame = document.createElement("iframe");
+        iFrame.setAttribute("src", url);
+        iFrame.setAttribute("style", "display:none;");
+        iFrame.setAttribute("height", "0px");
+        iFrame.setAttribute("width", "0px");
+        iFrame.setAttribute("frameborder", "0");
+        document.body.appendChild(iFrame);
+        // 发起请求后这个 iFrame 就没用了，所以把它从 dom 上移除掉
+        iFrame.parentNode.removeChild(iFrame);
+        iFrame = null;
+        
+        // 方法二
+        // location.href = "openVC://test?title=titelData&name=nameData";
+    }
+
+    function handleCallOCMethodHandler() {
+        window.webkit.messageHandlers.callNativeMethod.postMessage(["name","zhangdan","age", 18]);
+    }
+
+    function handleOCCallJSMothod(param) {
+        alert('原生调用JS方法 参数 = ' + param);
+    }
+</script>

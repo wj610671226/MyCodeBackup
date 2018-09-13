@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hGb-Fj-P9p">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Demo-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JSH5Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="N3Q-F6-yCM">
+                                <rect key="frame" x="0.0" y="233.5" width="375" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yY6-eE-5eq">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                        <state key="normal" title="UIWebView-OC"/>
+                                        <connections>
+                                            <segue destination="2mK-0b-dHI" kind="push" id="drG-Ab-8OK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5U-ie-vPK">
+                                        <rect key="frame" x="0.0" y="40" width="375" height="40"/>
+                                        <state key="normal" title="UIWebView-Swift"/>
+                                        <connections>
+                                            <segue destination="EQ5-nQ-hRT" kind="push" id="Y1T-SX-mCm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frq-NJ-5sb">
+                                        <rect key="frame" x="0.0" y="80" width="375" height="40"/>
+                                        <state key="normal" title="WKWebView-OC"/>
+                                        <connections>
+                                            <segue destination="uKc-fW-wEV" kind="push" id="4jo-J3-9YJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEp-Ev-sv8">
+                                        <rect key="frame" x="0.0" y="120" width="375" height="40"/>
+                                        <state key="normal" title="WKWebView-Swift"/>
+                                        <connections>
+                                            <segue destination="4ML-jd-u3w" kind="push" id="vVs-qg-9m4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7l-Rp-4Iy">
+                                        <rect key="frame" x="0.0" y="160" width="375" height="40"/>
+                                        <state key="normal" title="JavascriptBridge"/>
+                                        <connections>
+                                            <segue destination="A6L-LP-Kp0" kind="push" id="zUo-KK-bLl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Z5c-rR-Bou"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="N3Q-F6-yCM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Uz2-XT-yAs"/>
+                            <constraint firstItem="N3Q-F6-yCM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZYi-tM-hIE"/>
+                            <constraint firstItem="N3Q-F6-yCM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="flQ-GH-juG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N3Q-F6-yCM" secondAttribute="trailing" id="yXZ-oN-Mzv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Demo" id="R93-tt-hLA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="974" y="-581"/>
+        </scene>
+        <!--JavascriptBridge-->
+        <scene sceneID="tNn-4k-WxN">
+            <objects>
+                <viewController id="A6L-LP-Kp0" customClass="JavascriptBridgeViewController" customModule="JSH5Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JNZ-fe-ciD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="iTk-of-BWO"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="JavascriptBridge" id="9Ie-zX-ITJ">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="kd1-n2-C5H">
+                            <connections>
+                                <action selector="nativeCallJsMethod:" destination="A6L-LP-Kp0" id="NAl-Ix-Wv7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ult-dR-xJi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="529" y="386"/>
+        </scene>
+        <!--UIWebView-OC-->
+        <scene sceneID="zHX-lC-hkm">
+            <objects>
+                <viewController id="2mK-0b-dHI" customClass="UIWebViewOCViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vmb-RZ-yQg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="B97-OU-7zm"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="UIWebView-OC" id="cQQ-Qr-Olx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pH4-iU-ERe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1791" y="-1878"/>
+        </scene>
+        <!--WKWebView-Swift-->
+        <scene sceneID="vXl-za-t9j">
+            <objects>
+                <viewController id="4ML-jd-u3w" customClass="WkWebViewViewController" customModule="JSH5Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s4T-ar-822">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="emd-Bu-29p"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="WKWebView-Swift" id="n6D-Uk-t6f"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SoY-If-070" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1790" y="205"/>
+        </scene>
+        <!--UIWebView-Swift-->
+        <scene sceneID="xKG-O8-Lx3">
+            <objects>
+                <viewController id="EQ5-nQ-hRT" customClass="UIWebViewViewController" customModule="JSH5Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y1a-8F-2Xr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="nvy-mY-4OK"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="UIWebView-Swift" id="e7E-gD-KDd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UGK-ju-gTU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1790" y="-1196"/>
+        </scene>
+        <!--WKWebView-OC-->
+        <scene sceneID="xco-Te-aEl">
+            <objects>
+                <viewController id="uKc-fW-wEV" customClass="WKWebViewOCViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UKM-Dq-eZR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="KFy-JK-MqQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="WKWebView-OC" id="aie-ak-pxG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4cR-Hi-m30" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1790" y="-510"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PxB-7J-8E8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hGb-Fj-P9p" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nfr-81-G32">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="GO4-6m-Dq1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="epx-tR-hmM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="197.59999999999999" y="-580.65967016491754"/>
+        </scene>
+    </scenes>
+</document>
