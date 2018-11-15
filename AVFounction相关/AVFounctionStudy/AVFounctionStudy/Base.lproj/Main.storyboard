@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RSN-rf-q5Y">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AVFounctionStudy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tSE-kG-upp">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4e-Tb-r46">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="86"/>
+                                        <state key="normal" title="SpeechSynthesizer"/>
+                                        <connections>
+                                            <segue destination="wdf-Ig-BB5" kind="push" id="9yQ-10-NKm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1XX-ZQ-BSr">
+                                        <rect key="frame" x="0.0" y="86" width="375" height="86.5"/>
+                                        <state key="normal" title="AudioSessionDemo"/>
+                                        <connections>
+                                            <segue destination="gRk-Kt-eSM" kind="push" id="kbP-DP-MkL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pco-Aq-5oO">
+                                        <rect key="frame" x="0.0" y="172.5" width="375" height="86"/>
+                                        <state key="normal" title="AVPlayerDemo"/>
+                                        <connections>
+                                            <segue destination="dDY-cX-qIo" kind="push" id="fEY-lm-CF2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qi0-0T-AYy">
+                                        <rect key="frame" x="0.0" y="258.5" width="375" height="86"/>
+                                        <state key="normal" title="AVKitDemo"/>
+                                        <connections>
+                                            <segue destination="ZSp-5D-h4e" kind="push" id="6SJ-yc-pR7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kzu-zW-dkD">
+                                        <rect key="frame" x="0.0" y="344.5" width="375" height="86"/>
+                                        <state key="normal" title="AVCaptureDemo"/>
+                                        <connections>
+                                            <segue destination="q64-n8-ghp" kind="push" id="zv8-1T-TFR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UzN-f4-9bi">
+                                        <rect key="frame" x="0.0" y="430.5" width="375" height="86.5"/>
+                                        <state key="normal" title="媒体的编辑和组合"/>
+                                        <connections>
+                                            <segue destination="e9Z-y5-18A" kind="push" id="kEr-TV-47l"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiF-LY-QgE">
+                                        <rect key="frame" x="0.0" y="517" width="375" height="86"/>
+                                        <state key="normal" title="AudioToolboxDemo"/>
+                                        <connections>
+                                            <segue destination="bbm-rN-4VG" kind="push" id="f29-50-dnB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tSE-kG-upp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1wA-YO-sRW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tSE-kG-upp" secondAttribute="bottom" id="IZq-eS-ssJ"/>
+                            <constraint firstItem="tSE-kG-upp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="L2m-sG-WyY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tSE-kG-upp" secondAttribute="trailing" id="XLD-eh-rzd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OfZ-5C-kqW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="754" y="769"/>
+        </scene>
+        <!--Capture Demo View Controller-->
+        <scene sceneID="jIV-JV-kOA">
+            <objects>
+                <viewController id="q64-n8-ghp" customClass="AVCaptureDemoViewController" customModule="AVFounctionStudy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I2a-rP-8Z8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="l9h-6C-IxW"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wol-Nr-w3N"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pGz-2I-bPZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1633" y="1194"/>
+        </scene>
+        <!--Audio Toolbox Demo View Controller-->
+        <scene sceneID="3e3-0v-y5a">
+            <objects>
+                <viewController id="bbm-rN-4VG" customClass="AudioToolboxDemoViewController" customModule="AVFounctionStudy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b7a-lW-JYB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="9RX-m0-QTZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zWb-od-16f">
+                        <rightBarButtonItems>
+                            <barButtonItem title="结束采集" id="YT0-qf-brt">
+                                <connections>
+                                    <action selector="stopRecord:" destination="bbm-rN-4VG" id="Agg-CY-ZSf"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="开始采集" id="2N3-6h-k9r">
+                                <connections>
+                                    <action selector="startRecord:" destination="bbm-rN-4VG" id="coA-vL-AuO"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fnc-eN-rNv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="438" y="1612"/>
+        </scene>
+        <!--Edit Media View Controller-->
+        <scene sceneID="LcV-4e-Wpa">
+            <objects>
+                <viewController id="e9Z-y5-18A" customClass="EditMediaViewController" customModule="AVFounctionStudy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kpw-Ms-agk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="uvR-Dq-6Tz"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QtO-UW-Lo1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lWR-j6-rJE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1575" y="1882"/>
+        </scene>
+        <!--Kit Demo View Controller-->
+        <scene sceneID="tFM-nM-aRt">
+            <objects>
+                <viewController id="ZSp-5D-h4e" customClass="AVKitDemoViewController" customModule="AVFounctionStudy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fRf-du-1WM" customClass="AVK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="0gc-nK-Bva"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Zt-2G-rpA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xsj-n7-Cs6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2322" y="775"/>
+        </scene>
+        <!--Player Demo View Controller-->
+        <scene sceneID="Dsc-5A-fK8">
+            <objects>
+                <viewController id="dDY-cX-qIo" customClass="AVPlayerDemoViewController" customModule="AVFounctionStudy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sTp-vb-vqO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eyT-aq-YgS"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rw6-Kz-UlR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vDD-6X-8O5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1412" y="355"/>
+        </scene>
+        <!--AudioSessionDemo-->
+        <scene sceneID="txC-zr-Rfr">
+            <objects>
+                <viewController id="gRk-Kt-eSM" customClass="AudioSessionDemoViewController" customModule="AVFounctionStudy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gZu-O0-hMg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="YtG-wV-xIR">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3DH-jj-n3l">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="301.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6k-DL-DnB">
+                                                <rect key="frame" x="172" y="135" width="31" height="30"/>
+                                                <state key="normal" title="播放"/>
+                                                <connections>
+                                                    <action selector="clickPlayMp3:" destination="gRk-Kt-eSM" eventType="touchUpInside" id="KhX-xr-HeI"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AVAudioPlayer播放音频" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgG-eW-4Mg">
+                                                <rect key="frame" x="97" y="44" width="180" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.80392156859999997" green="0.80392156859999997" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="sgG-eW-4Mg" firstAttribute="centerX" secondItem="3DH-jj-n3l" secondAttribute="centerX" id="X21-va-ISA"/>
+                                            <constraint firstItem="F6k-DL-DnB" firstAttribute="top" secondItem="sgG-eW-4Mg" secondAttribute="bottom" constant="70.5" id="fKH-o0-ys1"/>
+                                            <constraint firstItem="F6k-DL-DnB" firstAttribute="centerX" secondItem="3DH-jj-n3l" secondAttribute="centerX" id="kba-Jj-MyY"/>
+                                            <constraint firstItem="sgG-eW-4Mg" firstAttribute="top" secondItem="3DH-jj-n3l" secondAttribute="top" constant="44" id="kcM-P4-Fte"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="goI-oR-GW1">
+                                        <rect key="frame" x="0.0" y="301.5" width="375" height="301.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AVAudioRecorder录制音频" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ee-kt-jOs">
+                                                <rect key="frame" x="86" y="52" width="203" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hN-lW-T7m">
+                                                <rect key="frame" x="54" y="161" width="62" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="开始录制"/>
+                                                <connections>
+                                                    <action selector="clickRecoder:" destination="gRk-Kt-eSM" eventType="touchUpInside" id="fN3-Ex-3on"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhK-Ph-PP1">
+                                                <rect key="frame" x="172" y="161" width="62" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="暂停录制"/>
+                                                <connections>
+                                                    <action selector="pauseRecoder:" destination="gRk-Kt-eSM" eventType="touchUpInside" id="yLA-TO-hS5"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcr-0t-qba">
+                                                <rect key="frame" x="270" y="161" width="62" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="停止录制"/>
+                                                <connections>
+                                                    <action selector="pauseRecoder:" destination="gRk-Kt-eSM" eventType="touchUpInside" id="6El-n5-ltN"/>
+                                                    <action selector="stopRecoder:" destination="gRk-Kt-eSM" eventType="touchUpInside" id="McF-HC-7FF"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.60459835390000005" green="0.98290767769999998" blue="0.1894053533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="6ee-kt-jOs" firstAttribute="top" secondItem="goI-oR-GW1" secondAttribute="top" constant="52" id="VwO-Ep-MFY"/>
+                                            <constraint firstItem="6ee-kt-jOs" firstAttribute="centerX" secondItem="goI-oR-GW1" secondAttribute="centerX" id="XSL-Nn-fit"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YtG-wV-xIR" firstAttribute="leading" secondItem="cFi-C0-vEh" secondAttribute="leading" id="0jt-en-D8w"/>
+                            <constraint firstItem="YtG-wV-xIR" firstAttribute="trailing" secondItem="cFi-C0-vEh" secondAttribute="trailing" id="FXb-mO-eLz"/>
+                            <constraint firstItem="YtG-wV-xIR" firstAttribute="top" secondItem="cFi-C0-vEh" secondAttribute="top" id="fGT-0S-Oef"/>
+                            <constraint firstItem="cFi-C0-vEh" firstAttribute="bottom" secondItem="YtG-wV-xIR" secondAttribute="bottom" id="gb8-gL-fvp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cFi-C0-vEh"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="AudioSessionDemo" id="9OO-Kx-LTU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZK-Wf-1MU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1351" y="-316"/>
+        </scene>
+        <!--SpeechSynthesizer-->
+        <scene sceneID="Yvc-ah-IPH">
+            <objects>
+                <viewController id="wdf-Ig-BB5" customClass="SpeechSynthesizerViewController" customModule="AVFounctionStudy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="opM-Yn-Kda">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="354-sw-owH">
+                                <rect key="frame" x="128" y="295" width="108" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="文本转语音播放"/>
+                                <connections>
+                                    <action selector="clickPlay:" destination="wdf-Ig-BB5" eventType="touchDown" id="NHh-5C-A9x"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="AbP-Wy-0NK"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="SpeechSynthesizer" id="VUh-6S-aE6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d9F-bd-xUg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1313" y="-981"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6z8-6X-ZQM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RSN-rf-q5Y" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ccb-AU-CCM">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="iKz-xs-2Xz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cst-QS-T3Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="41" y="769"/>
+        </scene>
+    </scenes>
+</document>

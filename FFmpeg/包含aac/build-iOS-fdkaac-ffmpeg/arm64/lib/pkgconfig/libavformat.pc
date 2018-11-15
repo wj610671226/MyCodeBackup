@@ -1,0 +1,14 @@
+prefix=/Users/mac/Documents/bianyi/build-iOS-fdkaac-ffmpeg/arm64
+exec_prefix=${prefix}
+libdir=/Users/mac/Documents/bianyi/build-iOS-fdkaac-ffmpeg/arm64/lib
+includedir=/Users/mac/Documents/bianyi/build-iOS-fdkaac-ffmpeg/arm64/include
+
+Name: libavformat
+Description: FFmpeg container format library
+Version: 58.12.100
+Requires: libavcodec >= 58.18.100, libswresample >= 3.1.100, libavutil >= 56.14.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavformat -lm -lbz2 -lz -Wl,-framework,CoreFoundation -Wl,-framework,Security
+Libs.private: 
+Cflags: -I${includedir}

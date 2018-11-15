@@ -1,0 +1,14 @@
+prefix=/Users/mac/Documents/bianyi/build-iOS-fdkaac-ffmpeg/arm64
+exec_prefix=${prefix}
+libdir=/Users/mac/Documents/bianyi/build-iOS-fdkaac-ffmpeg/arm64/lib
+includedir=/Users/mac/Documents/bianyi/build-iOS-fdkaac-ffmpeg/arm64/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 58.18.100
+Requires: libswresample >= 3.1.100, libavutil >= 56.14.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavcodec -pthread -liconv -lm -lz -framework AudioToolbox -lfdk-aac -framework VideoToolbox -framework CoreFoundation -framework CoreMedia -framework CoreVideo
+Libs.private: 
+Cflags: -I${includedir}

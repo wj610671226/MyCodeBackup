@@ -1,0 +1,14 @@
+prefix=/Users/mac/Documents/bianyi/build-iOS-fdkaac-ffmpeg/arm64
+exec_prefix=${prefix}
+libdir=/Users/mac/Documents/bianyi/build-iOS-fdkaac-ffmpeg/arm64/lib
+includedir=/Users/mac/Documents/bianyi/build-iOS-fdkaac-ffmpeg/arm64/include
+
+Name: libavdevice
+Description: FFmpeg device handling library
+Version: 58.3.100
+Requires: libavfilter >= 7.16.100, libswscale >= 5.1.100, libavformat >= 58.12.100, libavcodec >= 58.18.100, libswresample >= 3.1.100, libavutil >= 56.14.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavdevice -framework Foundation -lm -framework AVFoundation -framework CoreVideo -framework CoreMedia -pthread
+Libs.private: 
+Cflags: -I${includedir}

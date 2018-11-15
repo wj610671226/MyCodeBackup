@@ -51,5 +51,9 @@ JS和Native相互调用代码
 
 一键将私有库代码提交到git仓库，并更新私有库CocoaPods索引
 
+* FFmpeg
+
+FFmpeg编译脚本及相关代码
+
 
 
