@@ -55,5 +55,9 @@ JS和Native相互调用代码
 
 FFmpeg编译脚本及相关代码
 
+* FTPDemo
+
+FTP被动模式的实现
+
 
 

@@ -1,0 +1,363 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A0F6272F2237D71F002C36C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F6272E2237D71F002C36C9 /* AppDelegate.m */; };
+		A0F627322237D71F002C36C9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F627312237D71F002C36C9 /* ViewController.m */; };
+		A0F627352237D71F002C36C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0F627332237D71F002C36C9 /* Main.storyboard */; };
+		A0F627372237D71F002C36C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0F627362237D71F002C36C9 /* Assets.xcassets */; };
+		A0F6273A2237D71F002C36C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0F627382237D71F002C36C9 /* LaunchScreen.storyboard */; };
+		A0F6273D2237D71F002C36C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F6273C2237D71F002C36C9 /* main.m */; };
+		A0F627662237DE7D002C36C9 /* WJFtpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F6275F2237DE7D002C36C9 /* WJFtpRequest.m */; };
+		A0F627672237DE7D002C36C9 /* WJFtpRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F627612237DE7D002C36C9 /* WJFtpRequestManager.m */; };
+		A0F627682237DE7D002C36C9 /* WJQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F627642237DE7D002C36C9 /* WJQueue.m */; };
+		A0F6276A2237E03C002C36C9 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = A0F627692237E03C002C36C9 /* test.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A0F6272A2237D71F002C36C9 /* FTPDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTPDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0F6272D2237D71F002C36C9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A0F6272E2237D71F002C36C9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A0F627302237D71F002C36C9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A0F627312237D71F002C36C9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A0F627342237D71F002C36C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A0F627362237D71F002C36C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A0F627392237D71F002C36C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A0F6273B2237D71F002C36C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0F6273C2237D71F002C36C9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A0F6275E2237DE7D002C36C9 /* WJFtpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJFtpRequest.h; sourceTree = "<group>"; };
+		A0F6275F2237DE7D002C36C9 /* WJFtpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJFtpRequest.m; sourceTree = "<group>"; };
+		A0F627602237DE7D002C36C9 /* WJFtpRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJFtpRequestManager.h; sourceTree = "<group>"; };
+		A0F627612237DE7D002C36C9 /* WJFtpRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJFtpRequestManager.m; sourceTree = "<group>"; };
+		A0F627622237DE7D002C36C9 /* WJFtpRequestManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJFtpRequestManagerProtocol.h; sourceTree = "<group>"; };
+		A0F627632237DE7D002C36C9 /* WJQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJQueue.h; sourceTree = "<group>"; };
+		A0F627642237DE7D002C36C9 /* WJQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJQueue.m; sourceTree = "<group>"; };
+		A0F627652237DE7D002C36C9 /* WJTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJTools.h; sourceTree = "<group>"; };
+		A0F627692237E03C002C36C9 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test.png; path = ../../MyFtpTest/test.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A0F627272237D71E002C36C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A0F627212237D71E002C36C9 = {
+			isa = PBXGroup;
+			children = (
+				A0F6272C2237D71F002C36C9 /* FTPDemo */,
+				A0F6272B2237D71F002C36C9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A0F6272B2237D71F002C36C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A0F6272A2237D71F002C36C9 /* FTPDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A0F6272C2237D71F002C36C9 /* FTPDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A0F627692237E03C002C36C9 /* test.png */,
+				A0F6275D2237DE7D002C36C9 /* WJFtpTool */,
+				A0F6272D2237D71F002C36C9 /* AppDelegate.h */,
+				A0F6272E2237D71F002C36C9 /* AppDelegate.m */,
+				A0F627302237D71F002C36C9 /* ViewController.h */,
+				A0F627312237D71F002C36C9 /* ViewController.m */,
+				A0F627332237D71F002C36C9 /* Main.storyboard */,
+				A0F627362237D71F002C36C9 /* Assets.xcassets */,
+				A0F627382237D71F002C36C9 /* LaunchScreen.storyboard */,
+				A0F6273B2237D71F002C36C9 /* Info.plist */,
+				A0F6273C2237D71F002C36C9 /* main.m */,
+			);
+			path = FTPDemo;
+			sourceTree = "<group>";
+		};
+		A0F6275D2237DE7D002C36C9 /* WJFtpTool */ = {
+			isa = PBXGroup;
+			children = (
+				A0F6275E2237DE7D002C36C9 /* WJFtpRequest.h */,
+				A0F6275F2237DE7D002C36C9 /* WJFtpRequest.m */,
+				A0F627602237DE7D002C36C9 /* WJFtpRequestManager.h */,
+				A0F627612237DE7D002C36C9 /* WJFtpRequestManager.m */,
+				A0F627622237DE7D002C36C9 /* WJFtpRequestManagerProtocol.h */,
+				A0F627632237DE7D002C36C9 /* WJQueue.h */,
+				A0F627642237DE7D002C36C9 /* WJQueue.m */,
+				A0F627652237DE7D002C36C9 /* WJTools.h */,
+			);
+			path = WJFtpTool;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A0F627292237D71E002C36C9 /* FTPDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0F627402237D71F002C36C9 /* Build configuration list for PBXNativeTarget "FTPDemo" */;
+			buildPhases = (
+				A0F627262237D71E002C36C9 /* Sources */,
+				A0F627272237D71E002C36C9 /* Frameworks */,
+				A0F627282237D71E002C36C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FTPDemo;
+			productName = FTPDemo;
+			productReference = A0F6272A2237D71F002C36C9 /* FTPDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A0F627222237D71E002C36C9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = wangjie;
+				TargetAttributes = {
+					A0F627292237D71E002C36C9 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A0F627252237D71E002C36C9 /* Build configuration list for PBXProject "FTPDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A0F627212237D71E002C36C9;
+			productRefGroup = A0F6272B2237D71F002C36C9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A0F627292237D71E002C36C9 /* FTPDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A0F627282237D71E002C36C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0F6273A2237D71F002C36C9 /* LaunchScreen.storyboard in Resources */,
+				A0F627372237D71F002C36C9 /* Assets.xcassets in Resources */,
+				A0F627352237D71F002C36C9 /* Main.storyboard in Resources */,
+				A0F6276A2237E03C002C36C9 /* test.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A0F627262237D71E002C36C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0F627322237D71F002C36C9 /* ViewController.m in Sources */,
+				A0F627662237DE7D002C36C9 /* WJFtpRequest.m in Sources */,
+				A0F627672237DE7D002C36C9 /* WJFtpRequestManager.m in Sources */,
+				A0F6273D2237D71F002C36C9 /* main.m in Sources */,
+				A0F627682237DE7D002C36C9 /* WJQueue.m in Sources */,
+				A0F6272F2237D71F002C36C9 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A0F627332237D71F002C36C9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A0F627342237D71F002C36C9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A0F627382237D71F002C36C9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A0F627392237D71F002C36C9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A0F6273E2237D71F002C36C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A0F6273F2237D71F002C36C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A0F627412237D71F002C36C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C2R4SEKKYS;
+				INFOPLIST_FILE = FTPDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yifu..FTPDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A0F627422237D71F002C36C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C2R4SEKKYS;
+				INFOPLIST_FILE = FTPDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yifu..FTPDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A0F627252237D71E002C36C9 /* Build configuration list for PBXProject "FTPDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0F6273E2237D71F002C36C9 /* Debug */,
+				A0F6273F2237D71F002C36C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0F627402237D71F002C36C9 /* Build configuration list for PBXNativeTarget "FTPDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0F627412237D71F002C36C9 /* Debug */,
+				A0F627422237D71F002C36C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A0F627222237D71E002C36C9 /* Project object */;
+}
