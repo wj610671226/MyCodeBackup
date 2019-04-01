@@ -59,5 +59,16 @@ FFmpeg编译脚本及相关代码
 
 FTP被动模式的实现
 
+* tbs
+
+Android端实现TBS预览代码，提供RN端使用
+
+```
+1、RN跳转Activity展示pdf等
+NativeModules.TbsModule.previewFileByTBSForRN(filePath);
+2、在RN端加载原生视图展示
+<TbsPreviewView localPath={this.state.localPath}/>
+```
+
 
 
