@@ -70,5 +70,9 @@ NativeModules.TbsModule.previewFileByTBSForRN(filePath);
 <TbsPreviewView localPath={this.state.localPath}/>
 ```
 
+* LineProgressView
+
+Reat Native实现渐变进度条
+
 
 

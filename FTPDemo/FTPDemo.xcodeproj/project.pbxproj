@@ -16,7 +16,6 @@
 		A0F627662237DE7D002C36C9 /* WJFtpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F6275F2237DE7D002C36C9 /* WJFtpRequest.m */; };
 		A0F627672237DE7D002C36C9 /* WJFtpRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F627612237DE7D002C36C9 /* WJFtpRequestManager.m */; };
 		A0F627682237DE7D002C36C9 /* WJQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F627642237DE7D002C36C9 /* WJQueue.m */; };
-		A0F6276A2237E03C002C36C9 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = A0F627692237E03C002C36C9 /* test.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +37,6 @@
 		A0F627632237DE7D002C36C9 /* WJQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJQueue.h; sourceTree = "<group>"; };
 		A0F627642237DE7D002C36C9 /* WJQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJQueue.m; sourceTree = "<group>"; };
 		A0F627652237DE7D002C36C9 /* WJTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJTools.h; sourceTree = "<group>"; };
-		A0F627692237E03C002C36C9 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test.png; path = ../../MyFtpTest/test.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +69,6 @@
 		A0F6272C2237D71F002C36C9 /* FTPDemo */ = {
 			isa = PBXGroup;
 			children = (
-				A0F627692237E03C002C36C9 /* test.png */,
 				A0F6275D2237DE7D002C36C9 /* WJFtpTool */,
 				A0F6272D2237D71F002C36C9 /* AppDelegate.h */,
 				A0F6272E2237D71F002C36C9 /* AppDelegate.m */,
@@ -162,7 +159,6 @@
 				A0F6273A2237D71F002C36C9 /* LaunchScreen.storyboard in Resources */,
 				A0F627372237D71F002C36C9 /* Assets.xcassets in Resources */,
 				A0F627352237D71F002C36C9 /* Main.storyboard in Resources */,
-				A0F6276A2237E03C002C36C9 /* test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

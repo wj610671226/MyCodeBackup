@@ -12,12 +12,25 @@
 
 @interface ViewController ()<WJFtpRequestManagerDelegate>
 @property (nonatomic, strong)WJFtpRequestManager * manager;
+@property (nonatomic, copy)NSString * name;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self test];
+}
+- (void)test {
+    NSLog(@"ssss");
+    self.name = @"zhangsan";
 }
 
 - (IBAction)clickShowPath:(UIButton *)sender {
