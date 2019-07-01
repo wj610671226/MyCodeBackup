@@ -26,18 +26,13 @@ typedef void(^FailBlock)(NSString * identifier, NSString * errorMessage);
 + (instancetype)shareInstance;
 
 - (void)addDownloadFileWithRelativePath:(NSString *)filePath
-                            toLocalPath:(NSString *)localPath
-                             identifier:(NSString *)identifier
+                         toLocalPath:(NSString *)localPath
+                          identifier:(NSString *)identifier
                                fileSize:(NSInteger)fileSize;
 
-- (void)addDownloadFileWithRelativePath:(NSString *)filePath
-                            toLocalPath:(NSString *)localPath
-                             identifier:(NSString *)identifier;
-
-
 - (void)addUploadFileWithRelativePath:(NSString *)filePath
-                          toLocalPath:(NSString *)localPath
-                           identifier:(NSString *)identifier;
+                            toLocalPath:(NSString *)localPath
+                               identifier:(NSString *)identifier;
 
 - (void)createResourceToRemoteRelativeFolder:(NSString *)path identifier:(NSString *)identifier;
 

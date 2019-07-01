@@ -10,6 +10,7 @@
 @interface WJQueue : NSObject
 
 - (void)enqueue:(id)object;
+- (void)insert:(id)object;
 - (id)dequeue;
 - (BOOL)removeObject:(id)object;
 - (NSArray *)allItems;
