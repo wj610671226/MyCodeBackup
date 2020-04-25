@@ -1,0 +1,373 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A0C3321124434FF600883280 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C3321024434FF600883280 /* UIKit.framework */; };
+		A0C3321324434FF600883280 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C3321224434FF600883280 /* Foundation.framework */; };
+		A0C3321524434FF600883280 /* CydiaSubstrate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C3321424434FF600883280 /* CydiaSubstrate.framework */; };
+		A0C3321E24434FF600883280 /* DangBeiLib.mm in Sources */ = {isa = PBXBuildFile; fileRef = A0C3321D24434FF600883280 /* DangBeiLib.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A0C3320D24434FF600883280 /* DangBeiLib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = DangBeiLib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0C3321024434FF600883280 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A0C3321224434FF600883280 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A0C3321424434FF600883280 /* CydiaSubstrate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CydiaSubstrate.framework; path = Library/Frameworks/CydiaSubstrate.framework; sourceTree = DEVELOPER_DIR; };
+		A0C3321924434FF600883280 /* control */ = {isa = PBXFileReference; lastKnownFileType = text; path = control; sourceTree = "<group>"; };
+		A0C3321B24434FF600883280 /* DangBeiLib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DangBeiLib-Prefix.pch"; path = "../DangBeiLib-Prefix.pch"; sourceTree = "<group>"; };
+		A0C3321C24434FF600883280 /* DangBeiLib.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = DangBeiLib.xm; sourceTree = "<group>"; };
+		A0C3321D24434FF600883280 /* DangBeiLib.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DangBeiLib.mm; sourceTree = "<group>"; };
+		A0C3322224434FF600883280 /* DangBeiLib.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DangBeiLib.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A0C3320924434FF600883280 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0C3321124434FF600883280 /* UIKit.framework in Frameworks */,
+				A0C3321324434FF600883280 /* Foundation.framework in Frameworks */,
+				A0C3321524434FF600883280 /* CydiaSubstrate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A0C3320224434FF600883280 = {
+			isa = PBXGroup;
+			children = (
+				A0C3321624434FF600883280 /* DangBeiLib */,
+				A0C3320F24434FF600883280 /* Frameworks */,
+				A0C3320E24434FF600883280 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A0C3320E24434FF600883280 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A0C3320D24434FF600883280 /* DangBeiLib.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A0C3320F24434FF600883280 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A0C3321024434FF600883280 /* UIKit.framework */,
+				A0C3321224434FF600883280 /* Foundation.framework */,
+				A0C3321424434FF600883280 /* CydiaSubstrate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A0C3321624434FF600883280 /* DangBeiLib */ = {
+			isa = PBXGroup;
+			children = (
+				A0C3321C24434FF600883280 /* DangBeiLib.xm */,
+				A0C3321D24434FF600883280 /* DangBeiLib.mm */,
+				A0C3321724434FF600883280 /* Package */,
+				A0C3321A24434FF600883280 /* Supporting Files */,
+			);
+			path = DangBeiLib;
+			sourceTree = "<group>";
+		};
+		A0C3321724434FF600883280 /* Package */ = {
+			isa = PBXGroup;
+			children = (
+				A0C3321824434FF600883280 /* DEBIAN */,
+				A0C3321F24434FF600883280 /* Library */,
+			);
+			path = Package;
+			sourceTree = "<group>";
+		};
+		A0C3321824434FF600883280 /* DEBIAN */ = {
+			isa = PBXGroup;
+			children = (
+				A0C3321924434FF600883280 /* control */,
+			);
+			path = DEBIAN;
+			sourceTree = "<group>";
+		};
+		A0C3321A24434FF600883280 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A0C3321B24434FF600883280 /* DangBeiLib-Prefix.pch */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A0C3321F24434FF600883280 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				A0C3322024434FF600883280 /* MobileSubstrate */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		A0C3322024434FF600883280 /* MobileSubstrate */ = {
+			isa = PBXGroup;
+			children = (
+				A0C3322124434FF600883280 /* DynamicLibraries */,
+			);
+			path = MobileSubstrate;
+			sourceTree = "<group>";
+		};
+		A0C3322124434FF600883280 /* DynamicLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				A0C3322224434FF600883280 /* DangBeiLib.plist */,
+			);
+			path = DynamicLibraries;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A0C3320A24434FF600883280 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A0C3320C24434FF600883280 /* DangBeiLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0C3322524434FF600883280 /* Build configuration list for PBXNativeTarget "DangBeiLib" */;
+			buildPhases = (
+				A0C3320724434FF600883280 /* ShellScript */,
+				A0C3320824434FF600883280 /* Sources */,
+				A0C3320924434FF600883280 /* Frameworks */,
+				A0C3320A24434FF600883280 /* Headers */,
+				A0C3320B24434FF600883280 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DangBeiLib;
+			productName = DangBeiLib;
+			productReference = A0C3320D24434FF600883280 /* DangBeiLib.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A0C3320324434FF600883280 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1100;
+				TargetAttributes = {
+					A0C3320C24434FF600883280 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = A0C3320624434FF600883280 /* Build configuration list for PBXProject "DangBeiLib" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A0C3320224434FF600883280;
+			productRefGroup = A0C3320E24434FF600883280 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A0C3320C24434FF600883280 /* DangBeiLib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A0C3320724434FF600883280 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/bin/md --xcbp-logos";
+		};
+		A0C3320B24434FF600883280 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/bin/md --xcbp";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A0C3320824434FF600883280 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0C3321E24434FF600883280 /* DangBeiLib.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A0C3322324434FF600883280 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(MonkeyDevPath)/frameworks/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/lib/**";
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				OTHER_CFLAGS = "-DTHEOS_INSTANCE_NAME=\"\\\"DangBeiLib\\\"\"";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A0C3322424434FF600883280 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(MonkeyDevPath)/frameworks/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/lib/**";
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-DTHEOS_INSTANCE_NAME=\"\\\"DangBeiLib\\\"\"";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		A0C3322624434FF600883280 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Chengdu Westone Information Industry INC. (K8MXV5Q42C)";
+				CODE_SIGN_STYLE = Manual;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DangBeiLib/DangBeiLib-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				MonkeyDevBuildPackageOnAnyBuild = NO;
+				MonkeyDevClearUiCacheOnInstall = NO;
+				MonkeyDevCopyOnBuild = NO;
+				MonkeyDevDeviceIP = "";
+				MonkeyDevDevicePassword = "";
+				MonkeyDevDevicePort = 2222;
+				MonkeyDevInstallOnAnyBuild = YES;
+				MonkeyDevInstallOnProfiling = YES;
+				MonkeyDevkillProcessOnInstall = DangBei;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A0C3322724434FF600883280 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Chengdu Westone Information Industry INC. (K8MXV5Q42C)";
+				CODE_SIGN_STYLE = Manual;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DangBeiLib/DangBeiLib-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				MonkeyDevBuildPackageOnAnyBuild = NO;
+				MonkeyDevClearUiCacheOnInstall = NO;
+				MonkeyDevCopyOnBuild = NO;
+				MonkeyDevDeviceIP = "";
+				MonkeyDevDevicePassword = "";
+				MonkeyDevDevicePort = 2222;
+				MonkeyDevInstallOnAnyBuild = YES;
+				MonkeyDevInstallOnProfiling = YES;
+				MonkeyDevkillProcessOnInstall = DangBei;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A0C3320624434FF600883280 /* Build configuration list for PBXProject "DangBeiLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0C3322324434FF600883280 /* Release */,
+				A0C3322424434FF600883280 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0C3322524434FF600883280 /* Build configuration list for PBXNativeTarget "DangBeiLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0C3322624434FF600883280 /* Release */,
+				A0C3322724434FF600883280 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A0C3320324434FF600883280 /* Project object */;
+}
