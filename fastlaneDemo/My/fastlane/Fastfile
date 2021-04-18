@@ -72,4 +72,36 @@ platform :ios do
   	buile_release(options)
     upload(options) #提交App Store审核
   end
+
+
+  desc "打包APP"
+  lane :build_app_local do
+    build_app(
+      clean:true,
+      workspace: "Demo.xcworkspace",
+      scheme: "Demo",
+      output_directory:"./fastlane/release_ipa",
+      output_name: "Demo.ipa",# ipa 文件名
+      export_xcargs: "-allowProvisioningUpdates",
+      include_symbols: "false",
+      export_options: {
+        method: "app-store",
+        provisioningProfiles: { 
+          "com.demo.test" => "demo_dis",
+          "com.demo.test.Tunnel" => "demo_tunnel"
+        }
+      }
+    )
+  end
+
+  desc "上传ipa到testflight"
+  # 在~/.zshrc文件配置（开启了双向认证）
+  # export FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD=xznq-jivl-glrx-cmdl
+  #  export SPACESHIP_2FA_SMS_DEFAULT_PHONE_NUMBER="+86 18283606699"
+  lane :upload_ipa_test do
+    upload_to_testflight(
+      apple_id: "apple_id",
+      ipa: "./fastlane/release_ipa/Demo.ipa",
+    )
+  end
 end
