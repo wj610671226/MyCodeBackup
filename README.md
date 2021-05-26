@@ -81,3 +81,9 @@ Reat Native实现渐变进度条
 越狱开发案例
 
 * curl和OpenSSL编译脚本
+
+* Mac开发相关
+
+守护进程配置文件：com.my.macservice.plist 
+Mac APP签名公正脚本：notarizd_check_app.sh
+检查守护进程是否运行的脚本：launchservece.sh
