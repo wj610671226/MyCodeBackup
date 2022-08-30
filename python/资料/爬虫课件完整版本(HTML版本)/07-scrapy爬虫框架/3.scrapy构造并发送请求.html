@@ -1,0 +1,1121 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>scrapy数据建模与请求 | 爬虫课程概要</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../07-scrapy爬虫框架/4.scrapy模拟登陆.html" />
+    
+    
+    <link rel="prev" href="../07-scrapy爬虫框架/2.scrapy的入门使用.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="7.3"
+        data-chapter-title="scrapy数据建模与请求"
+        data-filepath="07-scrapy爬虫框架/3.scrapy构造并发送请求.md"
+        data-basepath=".."
+        data-revision="Sat Dec 14 2019 17:07:26 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="01-爬虫基础/index.html">
+            
+                
+                    <a href="../01-爬虫基础/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        爬虫基础
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="01-爬虫基础/1.爬虫概述.html">
+            
+                
+                    <a href="../01-爬虫基础/1.爬虫概述.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        爬虫概述
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01-爬虫基础/2.http协议复习.html">
+            
+                
+                    <a href="../01-爬虫基础/2.http协议复习.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        http协议复习
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="02-requests模块/index.html">
+            
+                
+                    <a href="../02-requests模块/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        requests模块
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="02-requests模块/requests模块.html">
+            
+                
+                    <a href="../02-requests模块/requests模块.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        requests模块
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="03-数据提取/index.html">
+            
+                
+                    <a href="../03-数据提取/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        数据提取
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="03-数据提取/1.数据提取概述.html">
+            
+                
+                    <a href="../03-数据提取/1.数据提取概述.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        数据提取概述
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="03-数据提取/2.数据提取-jsonpath模块.html">
+            
+                
+                    <a href="../03-数据提取/2.数据提取-jsonpath模块.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        数据提取-jsonpath模块
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="03-数据提取/3.数据提取-lxml模块.html">
+            
+                
+                    <a href="../03-数据提取/3.数据提取-lxml模块.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        数据提取-lxml模块
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="04-selenium的使用/index.html">
+            
+                
+                    <a href="../04-selenium的使用/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        selenium的使用
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="04-selenium的使用/1.selenium的介绍.html">
+            
+                
+                    <a href="../04-selenium的使用/1.selenium的介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        selenium的介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="04-selenium的使用/2.selenium定位获取标签对象并提取数据.html">
+            
+                
+                    <a href="../04-selenium的使用/2.selenium定位获取标签对象并提取数据.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        selenium定位获取标签对象并提取数据
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="04-selenium的使用/3.selenium的其它使用方法.html">
+            
+                
+                    <a href="../04-selenium的使用/3.selenium的其它使用方法.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        selenium的其他使用方法
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="05-抓包与反爬与反爬解决方案/index.html">
+            
+                
+                    <a href="../05-抓包与反爬与反爬解决方案/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        抓包与反爬与反爬解决方案
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="05-抓包与反爬与反爬解决方案/1.常见的反爬手段和解决方法.html">
+            
+                
+                    <a href="../05-抓包与反爬与反爬解决方案/1.常见的反爬手段和解决方法.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        常见的反爬手段和解决方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="05-抓包与反爬与反爬解决方案/2.打码平台的使用.html">
+            
+                
+                    <a href="../05-抓包与反爬与反爬解决方案/2.打码平台的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        打码平台的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="05-抓包与反爬与反爬解决方案/3.chrome在爬虫中的使用.html">
+            
+                
+                    <a href="../05-抓包与反爬与反爬解决方案/3.chrome在爬虫中的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        chrome在爬虫中的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="05-抓包与反爬与反爬解决方案/4.JS的解析.html">
+            
+                
+                    <a href="../05-抓包与反爬与反爬解决方案/4.JS的解析.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        JS的解析
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="06-mongodb数据库/index.html">
+            
+                
+                    <a href="../06-mongodb数据库/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        mongodb数据库
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="06-mongodb数据库/1.mongodb介绍和安装.html">
+            
+                
+                    <a href="../06-mongodb数据库/1.mongodb介绍和安装.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        mongodb介绍和安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="06-mongodb数据库/2.mongodb的简单使用.html">
+            
+                
+                    <a href="../06-mongodb数据库/2.mongodb的简单使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        mongodb的简单使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="06-mongodb数据库/3.mongodb的增删改查.html">
+            
+                
+                    <a href="../06-mongodb数据库/3.mongodb的增删改查.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        mongodb的增删改查
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="06-mongodb数据库/4.mongodb的聚合操作.html">
+            
+                
+                    <a href="../06-mongodb数据库/4.mongodb的聚合操作.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        mongodb的聚合操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="06-mongodb数据库/5.mongodb的索引操作.html">
+            
+                
+                    <a href="../06-mongodb数据库/5.mongodb的索引操作.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                        mongodb的索引操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="06-mongodb数据库/6.mongodb的权限管理.html">
+            
+                
+                    <a href="../06-mongodb数据库/6.mongodb的权限管理.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.6.</b>
+                        
+                        mongodb的权限管理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="06-mongodb数据库/7.mongodb和python交互.html">
+            
+                
+                    <a href="../06-mongodb数据库/7.mongodb和python交互.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.7.</b>
+                        
+                        mongodb和python交互
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="06-mongodb数据库/8.mongodb总结图.html">
+            
+                
+                    <a href="../06-mongodb数据库/8.mongodb总结图.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.8.</b>
+                        
+                        mongdb总结
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="07-scrapy爬虫框架/index.html">
+            
+                
+                    <a href="../07-scrapy爬虫框架/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        scrapy爬虫框架
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="07-scrapy爬虫框架/1.scrapy的概念作用和工作流程.html">
+            
+                
+                    <a href="../07-scrapy爬虫框架/1.scrapy的概念作用和工作流程.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        scrapy的概念作用和工作流程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="07-scrapy爬虫框架/2.scrapy的入门使用.html">
+            
+                
+                    <a href="../07-scrapy爬虫框架/2.scrapy的入门使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        scrapy的入门使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="7.3" data-path="07-scrapy爬虫框架/3.scrapy构造并发送请求.html">
+            
+                
+                    <a href="../07-scrapy爬虫框架/3.scrapy构造并发送请求.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        scrapy数据建模与请求
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="07-scrapy爬虫框架/4.scrapy模拟登陆.html">
+            
+                
+                    <a href="../07-scrapy爬虫框架/4.scrapy模拟登陆.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        scrapy模拟登陆
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="07-scrapy爬虫框架/5.scrapy管道的使用.html">
+            
+                
+                    <a href="../07-scrapy爬虫框架/5.scrapy管道的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.</b>
+                        
+                        scrapy管道的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="07-scrapy爬虫框架/14.crawlspider类的使用.html">
+            
+                
+                    <a href="../07-scrapy爬虫框架/14.crawlspider类的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.6.</b>
+                        
+                        crawlspider的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="07-scrapy爬虫框架/6.scrapy中间件的使用.html">
+            
+                
+                    <a href="../07-scrapy爬虫框架/6.scrapy中间件的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.</b>
+                        
+                        scrapy中间件的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="07-scrapy爬虫框架/7.scrapy_redis概念作用和流程.html">
+            
+                
+                    <a href="../07-scrapy爬虫框架/7.scrapy_redis概念作用和流程.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.8.</b>
+                        
+                        scrapy_redis概念作用和流程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.9" data-path="07-scrapy爬虫框架/8.scrapy_redis原理分析并实现断点续爬以及分布式爬虫.html">
+            
+                
+                    <a href="../07-scrapy爬虫框架/8.scrapy_redis原理分析并实现断点续爬以及分布式爬虫.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.9.</b>
+                        
+                        scrapy_redis原理分析并实现断点续爬以及分布式爬虫
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.10" data-path="07-scrapy爬虫框架/9.scrapy_splash组件的使用.html">
+            
+                
+                    <a href="../07-scrapy爬虫框架/9.scrapy_splash组件的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.10.</b>
+                        
+                        scrapy_splash组件的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.11" data-path="07-scrapy爬虫框架/10.scrapy的日志信息与配置.html">
+            
+                
+                    <a href="../07-scrapy爬虫框架/10.scrapy的日志信息与配置.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.11.</b>
+                        
+                        scrapy的日志信息与配置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.12" data-path="07-scrapy爬虫框架/11.scrapyd部署scrapy项目.html">
+            
+                
+                    <a href="../07-scrapy爬虫框架/11.scrapyd部署scrapy项目.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.12.</b>
+                        
+                        scrapyd部署scrapy项目
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.13" data-path="07-scrapy爬虫框架/12.gerapy爬虫管理.html">
+            
+                
+                    <a href="../07-scrapy爬虫框架/12.gerapy爬虫管理.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.13.</b>
+                        
+                        使用gerapy进行爬虫管理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.14" data-path="07-scrapy爬虫框架/13.scrapy总结图.html">
+            
+                
+                    <a href="../07-scrapy爬虫框架/13.scrapy总结图.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.14.</b>
+                        
+                        scrapy总结图
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="08-appium的使用/index.html">
+            
+                
+                    <a href="../08-appium的使用/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        appium的使用
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="08-appium的使用/1.appium环境安装.html">
+            
+                
+                    <a href="../08-appium的使用/1.appium环境安装.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        appium环境安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="08-appium的使用/2.利用appium自动控制移动设备并提取数据.html">
+            
+                
+                    <a href="../08-appium的使用/2.利用appium自动控制移动设备并提取数据.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        利用appium自动控制移动设备并提取数据
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >爬虫课程概要</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="scrapy&#x6570;&#x636E;&#x5EFA;&#x6A21;&#x4E0E;&#x8BF7;&#x6C42;">scrapy&#x6570;&#x636E;&#x5EFA;&#x6A21;&#x4E0E;&#x8BF7;&#x6C42;</h2>
+<h5 id="&#x5B66;&#x4E60;&#x76EE;&#x6807;&#xFF1A;">&#x5B66;&#x4E60;&#x76EE;&#x6807;&#xFF1A;</h5>
+<ol>
+<li>&#x5E94;&#x7528; &#x5728;scrapy&#x9879;&#x76EE;&#x4E2D;&#x8FDB;&#x884C;&#x5EFA;&#x6A21;</li>
+<li>&#x5E94;&#x7528; &#x6784;&#x9020;Request&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x53D1;&#x9001;&#x8BF7;&#x6C42;</li>
+<li>&#x5E94;&#x7528; &#x5229;&#x7528;meta&#x53C2;&#x6570;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x89E3;&#x6790;&#x51FD;&#x6570;&#x4E2D;&#x4F20;&#x9012;&#x6570;&#x636E;</li>
+</ol>
+<hr>
+<h3 id="1-&#x6570;&#x636E;&#x5EFA;&#x6A21;">1. &#x6570;&#x636E;&#x5EFA;&#x6A21;</h3>
+<blockquote>
+<p>&#x901A;&#x5E38;&#x5728;&#x505A;&#x9879;&#x76EE;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5728;items.py&#x4E2D;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5EFA;&#x6A21;</p>
+</blockquote>
+<h4 id="11-&#x4E3A;&#x4EC0;&#x4E48;&#x5EFA;&#x6A21;">1.1 &#x4E3A;&#x4EC0;&#x4E48;&#x5EFA;&#x6A21;</h4>
+<ol>
+<li>&#x5B9A;&#x4E49;item&#x5373;&#x63D0;&#x524D;&#x89C4;&#x5212;&#x597D;&#x54EA;&#x4E9B;&#x5B57;&#x6BB5;&#x9700;&#x8981;&#x6293;&#xFF0C;&#x9632;&#x6B62;&#x624B;&#x8BEF;&#xFF0C;&#x56E0;&#x4E3A;&#x5B9A;&#x4E49;&#x597D;&#x4E4B;&#x540E;&#xFF0C;&#x5728;&#x8FD0;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x81EA;&#x52A8;&#x68C0;&#x67E5;</li>
+<li>&#x914D;&#x5408;&#x6CE8;&#x91CA;&#x4E00;&#x8D77;&#x53EF;&#x4EE5;&#x6E05;&#x6670;&#x7684;&#x77E5;&#x9053;&#x8981;&#x6293;&#x53D6;&#x54EA;&#x4E9B;&#x5B57;&#x6BB5;&#xFF0C;&#x6CA1;&#x6709;&#x5B9A;&#x4E49;&#x7684;&#x5B57;&#x6BB5;&#x4E0D;&#x80FD;&#x6293;&#x53D6;&#xFF0C;&#x5728;&#x76EE;&#x6807;&#x5B57;&#x6BB5;&#x5C11;&#x7684;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5B57;&#x5178;&#x4EE3;&#x66FF;</li>
+<li>&#x4F7F;&#x7528;scrapy&#x7684;&#x4E00;&#x4E9B;&#x7279;&#x5B9A;&#x7EC4;&#x4EF6;&#x9700;&#x8981;Item&#x505A;&#x652F;&#x6301;&#xFF0C;&#x5982;scrapy&#x7684;ImagesPipeline&#x7BA1;&#x9053;&#x7C7B;&#xFF0C;&#x767E;&#x5EA6;&#x641C;&#x7D22;&#x4E86;&#x89E3;&#x66F4;&#x591A;</li>
+</ol>
+<h4 id="12-&#x5982;&#x4F55;&#x5EFA;&#x6A21;">1.2 &#x5982;&#x4F55;&#x5EFA;&#x6A21;</h4>
+<p>&#x5728;items.py&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x8981;&#x63D0;&#x53D6;&#x7684;&#x5B57;&#x6BB5;&#xFF1A;</p>
+<pre><code>class MyspiderItem(scrapy.Item): 
+    name = scrapy.Field()   # &#x8BB2;&#x5E08;&#x7684;&#x540D;&#x5B57;
+    title = scrapy.Field()  # &#x8BB2;&#x5E08;&#x7684;&#x804C;&#x79F0;
+    desc = scrapy.Field()   # &#x8BB2;&#x5E08;&#x7684;&#x4ECB;&#x7ECD;
+</code></pre><h4 id="13-&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x6A21;&#x677F;&#x7C7B;">1.3 &#x5982;&#x4F55;&#x4F7F;&#x7528;&#x6A21;&#x677F;&#x7C7B;</h4>
+<p>&#x6A21;&#x677F;&#x7C7B;&#x5B9A;&#x4E49;&#x4EE5;&#x540E;&#x9700;&#x8981;&#x5728;&#x722C;&#x866B;&#x4E2D;&#x5BFC;&#x5165;&#x5E76;&#x4E14;&#x5B9E;&#x4F8B;&#x5316;&#xFF0C;&#x4E4B;&#x540E;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x548C;&#x4F7F;&#x7528;&#x5B57;&#x5178;&#x76F8;&#x540C;</p>
+<p>job.py&#xFF1A;</p>
+<pre><code>from myspider.items import MyspiderItem   # &#x5BFC;&#x5165;Item&#xFF0C;&#x6CE8;&#x610F;&#x8DEF;&#x5F84;
+...
+    def parse(self, response)
+
+        item = MyspiderItem() # &#x5B9E;&#x4F8B;&#x5316;&#x540E;&#x53EF;&#x76F4;&#x63A5;&#x4F7F;&#x7528;
+
+        item[&apos;name&apos;] = node.xpath(&apos;./h3/text()&apos;).extract_first()
+        item[&apos;title&apos;] = node.xpath(&apos;./h4/text()&apos;).extract_first()
+        item[&apos;desc&apos;] = node.xpath(&apos;./p/text()&apos;).extract_first()
+
+        print(item)
+</code></pre><p>&#x6CE8;&#x610F;&#xFF1A;</p>
+<ol>
+<li>from myspider.items import MyspiderItem&#x8FD9;&#x4E00;&#x884C;&#x4EE3;&#x7801;&#x4E2D; &#x6CE8;&#x610F;item&#x7684;&#x6B63;&#x786E;&#x5BFC;&#x5165;&#x8DEF;&#x5F84;&#xFF0C;&#x5FFD;&#x7565;pycharm&#x6807;&#x8BB0;&#x7684;&#x9519;&#x8BEF;</li>
+<li>python&#x4E2D;&#x7684;&#x5BFC;&#x5165;&#x8DEF;&#x5F84;&#x8981;&#x8BC0;&#xFF1A;&#x4ECE;&#x54EA;&#x91CC;&#x5F00;&#x59CB;&#x8FD0;&#x884C;&#xFF0C;&#x5C31;&#x4ECE;&#x54EA;&#x91CC;&#x5F00;&#x59CB;&#x5BFC;&#x5165;</li>
+</ol>
+<h4 id="14-&#x5F00;&#x53D1;&#x6D41;&#x7A0B;&#x603B;&#x7ED3;">1.4 &#x5F00;&#x53D1;&#x6D41;&#x7A0B;&#x603B;&#x7ED3;</h4>
+<ol>
+<li>&#x521B;&#x5EFA;&#x9879;&#x76EE;<br>
+ scrapy startproject &#x9879;&#x76EE;&#x540D;<br></li>
+<li>&#x660E;&#x786E;&#x76EE;&#x6807;<br>
+ &#x5728;items.py&#x6587;&#x4EF6;&#x4E2D;&#x8FDB;&#x884C;&#x5EFA;&#x6A21;</li>
+<li>&#x521B;&#x5EFA;&#x722C;&#x866B;<br>
+ 3.1 &#x521B;&#x5EFA;&#x722C;&#x866B;<br><pre><code> scrapy genspider &#x722C;&#x866B;&#x540D; &#x5141;&#x8BB8;&#x7684;&#x57DF;
+</code></pre> 3.2 &#x5B8C;&#x6210;&#x722C;&#x866B;<br><pre><code> &#x4FEE;&#x6539;start_urls
+ &#x68C0;&#x67E5;&#x4FEE;&#x6539;allowed_domains
+ &#x7F16;&#x5199;&#x89E3;&#x6790;&#x65B9;&#x6CD5;
+</code></pre></li>
+<li>&#x4FDD;&#x5B58;&#x6570;&#x636E;<br>
+ &#x5728;pipelines.py&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x5BF9;&#x6570;&#x636E;&#x5904;&#x7406;&#x7684;&#x7BA1;&#x9053;<br>
+ &#x5728;settings.py&#x6587;&#x4EF6;&#x4E2D;&#x6CE8;&#x518C;&#x542F;&#x7528;&#x7BA1;&#x9053;</li>
+</ol>
+<h3 id="2-&#x7FFB;&#x9875;&#x8BF7;&#x6C42;&#x7684;&#x601D;&#x8DEF;">2. &#x7FFB;&#x9875;&#x8BF7;&#x6C42;&#x7684;&#x601D;&#x8DEF;</h3>
+<blockquote>
+<p>&#x5BF9;&#x4E8E;&#x8981;&#x63D0;&#x53D6;&#x5982;&#x4E0B;&#x56FE;&#x4E2D;&#x6240;&#x6709;&#x9875;&#x9762;&#x4E0A;&#x7684;&#x6570;&#x636E;&#x8BE5;&#x600E;&#x4E48;&#x529E;&#xFF1F;</p>
+</blockquote>
+<p><img src="images/3.1.scrapy&#x7FFB;&#x9875;.png" width="100%"> </p>
+<p>&#x56DE;&#x987E;requests&#x6A21;&#x5757;&#x662F;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x7FFB;&#x9875;&#x8BF7;&#x6C42;&#x7684;&#xFF1A;</p>
+<ol>
+<li>&#x627E;&#x5230;&#x4E0B;&#x4E00;&#x9875;&#x7684;URL&#x5730;&#x5740;</li>
+<li>&#x8C03;&#x7528;requests.get(url)</li>
+</ol>
+<p>scrapy&#x5B9E;&#x73B0;&#x7FFB;&#x9875;&#x7684;&#x601D;&#x8DEF;&#xFF1A;</p>
+<ol>
+<li>&#x627E;&#x5230;&#x4E0B;&#x4E00;&#x9875;&#x7684;url&#x5730;&#x5740;</li>
+<li>&#x6784;&#x9020;url&#x5730;&#x5740;&#x7684;&#x8BF7;&#x6C42;&#x5BF9;&#x8C61;&#xFF0C;&#x4F20;&#x9012;&#x7ED9;&#x5F15;&#x64CE;</li>
+</ol>
+<h3 id="3-&#x6784;&#x9020;request&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x53D1;&#x9001;&#x8BF7;&#x6C42;">3. &#x6784;&#x9020;Request&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x53D1;&#x9001;&#x8BF7;&#x6C42;</h3>
+<h4 id="31-&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;">3.1 &#x5B9E;&#x73B0;&#x65B9;&#x6CD5;</h4>
+<ol>
+<li>&#x786E;&#x5B9A;url&#x5730;&#x5740;</li>
+<li>&#x6784;&#x9020;&#x8BF7;&#x6C42;&#xFF0C;scrapy.Request(url,callback)<ul>
+<li>callback&#xFF1A;&#x6307;&#x5B9A;&#x89E3;&#x6790;&#x51FD;&#x6570;&#x540D;&#x79F0;&#xFF0C;&#x8868;&#x793A;&#x8BE5;&#x8BF7;&#x6C42;&#x8FD4;&#x56DE;&#x7684;&#x54CD;&#x5E94;&#x4F7F;&#x7528;&#x54EA;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x89E3;&#x6790;</li>
+</ul>
+</li>
+<li>&#x628A;&#x8BF7;&#x6C42;&#x4EA4;&#x7ED9;&#x5F15;&#x64CE;&#xFF1A;yield scrapy.Request(url,callback)</li>
+</ol>
+<h4 id="32-&#x7F51;&#x6613;&#x62DB;&#x8058;&#x722C;&#x866B;">3.2 &#x7F51;&#x6613;&#x62DB;&#x8058;&#x722C;&#x866B;</h4>
+<blockquote>
+<p>&#x901A;&#x8FC7;&#x722C;&#x53D6;&#x7F51;&#x6613;&#x62DB;&#x8058;&#x7684;&#x9875;&#x9762;&#x7684;&#x62DB;&#x8058;&#x4FE1;&#x606F;,&#x5B66;&#x4E60;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x7FFB;&#x9875;&#x8BF7;&#x6C42;</p>
+<p>&#x5730;&#x5740;&#xFF1A;<a href="https://hr.163.com/position/list.do" target="_blank">https://hr.163.com/position/list.do</a></p>
+</blockquote>
+<h5 id="&#x601D;&#x8DEF;&#x5206;&#x6790;&#xFF1A;">&#x601D;&#x8DEF;&#x5206;&#x6790;&#xFF1A;</h5>
+<ol>
+<li>&#x83B7;&#x53D6;&#x9996;&#x9875;&#x7684;&#x6570;&#x636E;</li>
+<li>&#x5BFB;&#x627E;&#x4E0B;&#x4E00;&#x9875;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x8FDB;&#x884C;&#x7FFB;&#x9875;&#xFF0C;&#x83B7;&#x53D6;&#x6570;&#x636E;</li>
+</ol>
+<h5 id="&#x6CE8;&#x610F;&#xFF1A;">&#x6CE8;&#x610F;&#xFF1A;</h5>
+<ol>
+<li>&#x53EF;&#x4EE5;&#x5728;settings&#x4E2D;&#x8BBE;&#x7F6E;ROBOTS&#x534F;&#x8BAE;</li>
+</ol>
+<pre><code># False&#x8868;&#x793A;&#x5FFD;&#x7565;&#x7F51;&#x7AD9;&#x7684;robots.txt&#x534F;&#x8BAE;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;True
+ROBOTSTXT_OBEY = False
+</code></pre><ol>
+<li>&#x53EF;&#x4EE5;&#x5728;settings&#x4E2D;&#x8BBE;&#x7F6E;User-Agent&#xFF1A;</li>
+</ol>
+<pre><code># scrapy&#x53D1;&#x9001;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#x7684;&#x9ED8;&#x8BA4;UA&#x90FD;&#x662F;&#x8BBE;&#x7F6E;&#x7684;&#x8FD9;&#x4E2A;User-Agent
+USER_AGENT = &apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36&apos;
+</code></pre><h4 id="33-&#x4EE3;&#x7801;&#x5B9E;&#x73B0;">3.3 &#x4EE3;&#x7801;&#x5B9E;&#x73B0;</h4>
+<p>&#x5728;&#x722C;&#x866B;&#x6587;&#x4EF6;&#x7684;parse&#x65B9;&#x6CD5;&#x4E2D;&#xFF1A;</p>
+<pre><code>......
+    # &#x63D0;&#x53D6;&#x4E0B;&#x4E00;&#x9875;&#x7684;href
+    next_url = response.xpath(&apos;//a[contains(text(),&quot;&gt;&quot;)]/@href&apos;).extract_first()
+
+    # &#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x6700;&#x540E;&#x4E00;&#x9875;
+    if next_url != &apos;javascript:void(0)&apos;:
+
+        # &#x6784;&#x9020;&#x5B8C;&#x6574;url
+        url = &apos;https://hr.163.com/position/list.do&apos; + next_url
+
+        # &#x6784;&#x9020;scrapy.Request&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;yield&#x7ED9;&#x5F15;&#x64CE;
+        # &#x5229;&#x7528;callback&#x53C2;&#x6570;&#x6307;&#x5B9A;&#x8BE5;Request&#x5BF9;&#x8C61;&#x4E4B;&#x540E;&#x83B7;&#x53D6;&#x7684;&#x54CD;&#x5E94;&#x7528;&#x54EA;&#x4E2A;&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x89E3;&#x6790;
+        yield scrapy.Request(url, callback=self.parse)
+......
+</code></pre><h4 id="34-scrapyrequest&#x7684;&#x66F4;&#x591A;&#x53C2;&#x6570;">3.4 scrapy.Request&#x7684;&#x66F4;&#x591A;&#x53C2;&#x6570;</h4>
+<pre><code class="lang-python">scrapy.Request(url[,callback,method=<span class="hljs-string">&quot;GET&quot;</span>,headers,body,cookies,meta,dont_filter=<span class="hljs-keyword">False</span>])
+</code></pre>
+<h5 id="&#x53C2;&#x6570;&#x89E3;&#x91CA;">&#x53C2;&#x6570;&#x89E3;&#x91CA;</h5>
+<ol>
+<li>&#x4E2D;&#x62EC;&#x53F7;&#x91CC;&#x7684;&#x53C2;&#x6570;&#x4E3A;&#x53EF;&#x9009;&#x53C2;&#x6570;</li>
+<li><strong>callback</strong>&#xFF1A;&#x8868;&#x793A;&#x5F53;&#x524D;&#x7684;url&#x7684;&#x54CD;&#x5E94;&#x4EA4;&#x7ED9;&#x54EA;&#x4E2A;&#x51FD;&#x6570;&#x53BB;&#x5904;&#x7406;</li>
+<li><strong>meta</strong>&#xFF1A;&#x5B9E;&#x73B0;&#x6570;&#x636E;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x89E3;&#x6790;&#x51FD;&#x6570;&#x4E2D;&#x4F20;&#x9012;&#xFF0C;meta&#x9ED8;&#x8BA4;&#x5E26;&#x6709;&#x90E8;&#x5206;&#x6570;&#x636E;&#xFF0C;&#x6BD4;&#x5982;&#x4E0B;&#x8F7D;&#x5EF6;&#x8FDF;&#xFF0C;&#x8BF7;&#x6C42;&#x6DF1;&#x5EA6;&#x7B49;</li>
+<li>dont_filter:&#x9ED8;&#x8BA4;&#x4E3A;False&#xFF0C;&#x4F1A;&#x8FC7;&#x6EE4;&#x8BF7;&#x6C42;&#x7684;url&#x5730;&#x5740;&#xFF0C;&#x5373;&#x8BF7;&#x6C42;&#x8FC7;&#x7684;url&#x5730;&#x5740;&#x4E0D;&#x4F1A;&#x7EE7;&#x7EED;&#x88AB;&#x8BF7;&#x6C42;&#xFF0C;&#x5BF9;&#x9700;&#x8981;&#x91CD;&#x590D;&#x8BF7;&#x6C42;&#x7684;url&#x5730;&#x5740;&#x53EF;&#x4EE5;&#x628A;&#x5B83;&#x8BBE;&#x7F6E;&#x4E3A;Ture&#xFF0C;&#x6BD4;&#x5982;&#x8D34;&#x5427;&#x7684;&#x7FFB;&#x9875;&#x8BF7;&#x6C42;&#xFF0C;&#x9875;&#x9762;&#x7684;&#x6570;&#x636E;&#x603B;&#x662F;&#x5728;&#x53D8;&#x5316;;start_urls&#x4E2D;&#x7684;&#x5730;&#x5740;&#x4F1A;&#x88AB;&#x53CD;&#x590D;&#x8BF7;&#x6C42;&#xFF0C;&#x5426;&#x5219;&#x7A0B;&#x5E8F;&#x4E0D;&#x4F1A;&#x542F;&#x52A8;</li>
+<li>method&#xFF1A;&#x6307;&#x5B9A;POST&#x6216;GET&#x8BF7;&#x6C42;</li>
+<li>headers&#xFF1A;&#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x5B57;&#x5178;&#xFF0C;&#x5176;&#x4E2D;&#x4E0D;&#x5305;&#x62EC;cookies</li>
+<li>cookies&#xFF1A;&#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x5B57;&#x5178;&#xFF0C;&#x4E13;&#x95E8;&#x653E;&#x7F6E;cookies</li>
+<li>body&#xFF1A;&#x63A5;&#x6536;json&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4E3A;POST&#x7684;&#x6570;&#x636E;&#xFF0C;&#x53D1;&#x9001;payload_post&#x8BF7;&#x6C42;&#x65F6;&#x4F7F;&#x7528;&#xFF08;&#x5728;&#x4E0B;&#x4E00;&#x7AE0;&#x8282;&#x4E2D;&#x4F1A;&#x4ECB;&#x7ECD;post&#x8BF7;&#x6C42;&#xFF09;</li>
+</ol>
+<h3 id="4-meta&#x53C2;&#x6570;&#x7684;&#x4F7F;&#x7528;">4. meta&#x53C2;&#x6570;&#x7684;&#x4F7F;&#x7528;</h3>
+<blockquote>
+<p>meta&#x7684;&#x4F5C;&#x7528;&#xFF1A;meta&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x6570;&#x636E;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x89E3;&#x6790;&#x51FD;&#x6570;&#x4E2D;&#x7684;&#x4F20;&#x9012;</p>
+</blockquote>
+<p>&#x5728;&#x722C;&#x866B;&#x6587;&#x4EF6;&#x7684;parse&#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x63D0;&#x53D6;&#x8BE6;&#x60C5;&#x9875;&#x589E;&#x52A0;&#x4E4B;&#x524D;callback&#x6307;&#x5B9A;&#x7684;parse_detail&#x51FD;&#x6570;&#xFF1A;</p>
+<pre><code>def parse(self,response):
+    ...
+    yield scrapy.Request(detail_url, callback=self.parse_detail,meta={&quot;item&quot;:item})
+...
+
+def parse_detail(self,response):
+    #&#x83B7;&#x53D6;&#x4E4B;&#x524D;&#x4F20;&#x5165;&#x7684;item
+    item = resposne.meta[&quot;item&quot;]
+</code></pre><h5 id="&#x7279;&#x522B;&#x6CE8;&#x610F;">&#x7279;&#x522B;&#x6CE8;&#x610F;</h5>
+<ol>
+<li>meta&#x53C2;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x5178;</li>
+<li>meta&#x5B57;&#x5178;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x56FA;&#x5B9A;&#x7684;&#x952E;<code>proxy</code>&#xFF0C;&#x8868;&#x793A;&#x4EE3;&#x7406;ip&#xFF0C;&#x5173;&#x4E8E;&#x4EE3;&#x7406;ip&#x7684;&#x4F7F;&#x7528;&#x6211;&#x4EEC;&#x5C06;&#x5728;scrapy&#x7684;&#x4E0B;&#x8F7D;&#x4E2D;&#x95F4;&#x4EF6;&#x7684;&#x5B66;&#x4E60;&#x4E2D;&#x8FDB;&#x884C;&#x4ECB;&#x7ECD;</li>
+</ol>
+<hr>
+<h2 id="&#x5C0F;&#x7ED3;">&#x5C0F;&#x7ED3;</h2>
+<ol>
+<li>&#x5B8C;&#x5584;&#x5E76;&#x4F7F;&#x7528;Item&#x6570;&#x636E;&#x7C7B;&#xFF1A;<ol>
+<li>&#x5728;items.py&#x4E2D;&#x5B8C;&#x5584;&#x8981;&#x722C;&#x53D6;&#x7684;&#x5B57;&#x6BB5;</li>
+<li>&#x5728;&#x722C;&#x866B;&#x6587;&#x4EF6;&#x4E2D;&#x5148;&#x5BFC;&#x5165;Item</li>
+<li>&#x5B9E;&#x529B;&#x5316;Item&#x5BF9;&#x8C61;&#x540E;&#xFF0C;&#x50CF;&#x5B57;&#x5178;&#x4E00;&#x6837;&#x76F4;&#x63A5;&#x4F7F;&#x7528;</li>
+</ol>
+</li>
+<li>&#x6784;&#x9020;Request&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#xFF1A;<ol>
+<li>&#x5BFC;&#x5165;scrapy.Request&#x7C7B;</li>
+<li>&#x5728;&#x89E3;&#x6790;&#x51FD;&#x6570;&#x4E2D;&#x63D0;&#x53D6;url</li>
+<li>yield scrapy.Request(url, callback=self.parse_detail, meta={})</li>
+</ol>
+</li>
+<li>&#x5229;&#x7528;meta&#x53C2;&#x6570;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x89E3;&#x6790;&#x51FD;&#x6570;&#x4E2D;&#x4F20;&#x9012;&#x6570;&#x636E;:<ol>
+<li>&#x901A;&#x8FC7;&#x524D;&#x4E00;&#x4E2A;&#x89E3;&#x6790;&#x51FD;&#x6570; yield scrapy.Request(url, callback=self.xxx, meta={}) &#x6765;&#x4F20;&#x9012;meta</li>
+<li>&#x5728;self.xxx&#x51FD;&#x6570;&#x4E2D; response.meta.get(&apos;key&apos;, &apos;&apos;) &#x6216; response.meta[&apos;key&apos;] &#x7684;&#x65B9;&#x5F0F;&#x53D6;&#x51FA;&#x4F20;&#x9012;&#x7684;&#x6570;&#x636E;</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h3 id="&#x53C2;&#x8003;&#x4EE3;&#x7801;">&#x53C2;&#x8003;&#x4EE3;&#x7801;</h3>
+<p>wangyi/spiders/job.py</p>
+<pre><code>import scrapy
+
+
+class JobSpider(scrapy.Spider):
+    name = &apos;job&apos;
+    # 2.&#x68C0;&#x67E5;&#x5141;&#x8BB8;&#x7684;&#x57DF;&#x540D;
+    allowed_domains = [&apos;163.com&apos;]
+    # 1 &#x8BBE;&#x7F6E;&#x8D77;&#x59CB;&#x7684;url
+    start_urls = [&apos;https://hr.163.com/position/list.do&apos;]
+
+    def parse(self, response):
+        # &#x83B7;&#x53D6;&#x6240;&#x6709;&#x7684;&#x804C;&#x4F4D;&#x8282;&#x70B9;&#x5217;&#x8868;
+        node_list = response.xpath(&apos;//*[@class=&quot;position-tb&quot;]/tbody/tr&apos;)
+        # print(len(node_list))
+
+        # &#x904D;&#x5386;&#x6240;&#x6709;&#x7684;&#x804C;&#x4F4D;&#x8282;&#x70B9;&#x5217;&#x8868;
+        for num, node in enumerate(node_list):
+            # &#x7D22;&#x5F15;&#x4E3A;&#x503C;&#x9664;2&#x53D6;&#x4F59;&#x4E3A;0&#x7684;&#x624D;&#x662F;&#x542B;&#x6709;&#x6570;&#x636E;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x901A;&#x8FC7;&#x5224;&#x65AD;&#x8FDB;&#x884C;&#x7B5B;&#x9009;
+            if num % 2 == 0:
+                item = {}
+
+                item[&apos;name&apos;] = node.xpath(&apos;./td[1]/a/text()&apos;).extract_first()
+                item[&apos;link&apos;] = node.xpath(&apos;./td[1]/a/@href&apos;).extract_first()
+                item[&apos;depart&apos;] = node.xpath(&apos;./td[2]/text()&apos;).extract_first()
+                item[&apos;category&apos;] = node.xpath(&apos;./td[3]/text()&apos;).extract_first()
+                item[&apos;type&apos;] = node.xpath(&apos;./td[4]/text()&apos;).extract_first()
+                item[&apos;address&apos;] = node.xpath(&apos;./td[5]/text()&apos;).extract_first()
+                item[&apos;num&apos;] = node.xpath(&apos;./td[6]/text()&apos;).extract_first().strip()
+                item[&apos;date&apos;] = node.xpath(&apos;./td[7]/text()&apos;).extract_first()
+                yield item
+
+        # &#x7FFB;&#x9875;&#x5904;&#x7406;
+        # &#x83B7;&#x53D6;&#x7FFB;&#x9875;url
+        part_url = response.xpath(&apos;//a[contains(text(),&quot;&gt;&quot;)]/@href&apos;).extract_first()
+
+        # &#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x6700;&#x540E;&#x4E00;&#x9875;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x662F;&#x6700;&#x540E;&#x4E00;&#x9875;&#x5219;&#x8FDB;&#x884C;&#x7FFB;&#x9875;&#x64CD;&#x4F5C;
+        if part_url != &apos;javascript:void(0)&apos;:
+            # &#x62FC;&#x63A5;&#x5B8C;&#x6574;&#x7FFB;&#x9875;url
+            next_url = &apos;https://hr.163.com/position/list.do&apos; + part_url
+
+            yield scrapy.Request(
+                url=next_url,
+                callback=self.parse
+            )
+</code></pre><p>wangyi/items.py</p>
+<pre><code>class WangyiItem(scrapy.Item):
+    # define the fields for your item here like:
+
+    name = scrapy.Field()
+    link = scrapy.Field()
+    depart = scrapy.Field()
+    category = scrapy.Field()
+    type = scrapy.Field()
+    address = scrapy.Field()
+    num = scrapy.Field()
+    date = scrapy.Field()
+</code></pre>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../07-scrapy爬虫框架/2.scrapy的入门使用.html" class="navigation navigation-prev " aria-label="Previous page: scrapy的入门使用"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../07-scrapy爬虫框架/4.scrapy模拟登陆.html" class="navigation navigation-next " aria-label="Next page: scrapy模拟登陆"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

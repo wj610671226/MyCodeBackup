@@ -87,3 +87,7 @@ Reat Native实现渐变进度条
 守护进程配置文件：com.my.macservice.plist 
 Mac APP签名公正脚本：notarizd_check_app.sh
 检查守护进程是否运行的脚本：launchservece.sh
+
+* python
+
+python以及爬虫相关代码

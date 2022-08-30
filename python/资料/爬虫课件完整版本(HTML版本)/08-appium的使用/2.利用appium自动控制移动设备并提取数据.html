@@ -1,0 +1,1112 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>利用appium自动控制移动设备并提取数据 | 爬虫课程概要</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    
+    <link rel="prev" href="../08-appium的使用/1.appium环境安装.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="8.2"
+        data-chapter-title="利用appium自动控制移动设备并提取数据"
+        data-filepath="08-appium的使用/2.利用appium自动控制移动设备并提取数据.md"
+        data-basepath=".."
+        data-revision="Sat Dec 14 2019 17:07:26 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="01-爬虫基础/index.html">
+            
+                
+                    <a href="../01-爬虫基础/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        爬虫基础
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="01-爬虫基础/1.爬虫概述.html">
+            
+                
+                    <a href="../01-爬虫基础/1.爬虫概述.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        爬虫概述
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01-爬虫基础/2.http协议复习.html">
+            
+                
+                    <a href="../01-爬虫基础/2.http协议复习.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        http协议复习
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="02-requests模块/index.html">
+            
+                
+                    <a href="../02-requests模块/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        requests模块
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="02-requests模块/requests模块.html">
+            
+                
+                    <a href="../02-requests模块/requests模块.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        requests模块
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="03-数据提取/index.html">
+            
+                
+                    <a href="../03-数据提取/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        数据提取
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="03-数据提取/1.数据提取概述.html">
+            
+                
+                    <a href="../03-数据提取/1.数据提取概述.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        数据提取概述
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="03-数据提取/2.数据提取-jsonpath模块.html">
+            
+                
+                    <a href="../03-数据提取/2.数据提取-jsonpath模块.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        数据提取-jsonpath模块
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="03-数据提取/3.数据提取-lxml模块.html">
+            
+                
+                    <a href="../03-数据提取/3.数据提取-lxml模块.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        数据提取-lxml模块
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="04-selenium的使用/index.html">
+            
+                
+                    <a href="../04-selenium的使用/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        selenium的使用
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="04-selenium的使用/1.selenium的介绍.html">
+            
+                
+                    <a href="../04-selenium的使用/1.selenium的介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        selenium的介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="04-selenium的使用/2.selenium定位获取标签对象并提取数据.html">
+            
+                
+                    <a href="../04-selenium的使用/2.selenium定位获取标签对象并提取数据.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        selenium定位获取标签对象并提取数据
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="04-selenium的使用/3.selenium的其它使用方法.html">
+            
+                
+                    <a href="../04-selenium的使用/3.selenium的其它使用方法.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        selenium的其他使用方法
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="05-抓包与反爬与反爬解决方案/index.html">
+            
+                
+                    <a href="../05-抓包与反爬与反爬解决方案/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        抓包与反爬与反爬解决方案
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="05-抓包与反爬与反爬解决方案/1.常见的反爬手段和解决方法.html">
+            
+                
+                    <a href="../05-抓包与反爬与反爬解决方案/1.常见的反爬手段和解决方法.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        常见的反爬手段和解决方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="05-抓包与反爬与反爬解决方案/2.打码平台的使用.html">
+            
+                
+                    <a href="../05-抓包与反爬与反爬解决方案/2.打码平台的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        打码平台的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="05-抓包与反爬与反爬解决方案/3.chrome在爬虫中的使用.html">
+            
+                
+                    <a href="../05-抓包与反爬与反爬解决方案/3.chrome在爬虫中的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        chrome在爬虫中的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="05-抓包与反爬与反爬解决方案/4.JS的解析.html">
+            
+                
+                    <a href="../05-抓包与反爬与反爬解决方案/4.JS的解析.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        JS的解析
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="06-mongodb数据库/index.html">
+            
+                
+                    <a href="../06-mongodb数据库/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        mongodb数据库
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="06-mongodb数据库/1.mongodb介绍和安装.html">
+            
+                
+                    <a href="../06-mongodb数据库/1.mongodb介绍和安装.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        mongodb介绍和安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="06-mongodb数据库/2.mongodb的简单使用.html">
+            
+                
+                    <a href="../06-mongodb数据库/2.mongodb的简单使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        mongodb的简单使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="06-mongodb数据库/3.mongodb的增删改查.html">
+            
+                
+                    <a href="../06-mongodb数据库/3.mongodb的增删改查.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        mongodb的增删改查
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="06-mongodb数据库/4.mongodb的聚合操作.html">
+            
+                
+                    <a href="../06-mongodb数据库/4.mongodb的聚合操作.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        mongodb的聚合操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="06-mongodb数据库/5.mongodb的索引操作.html">
+            
+                
+                    <a href="../06-mongodb数据库/5.mongodb的索引操作.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                        mongodb的索引操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="06-mongodb数据库/6.mongodb的权限管理.html">
+            
+                
+                    <a href="../06-mongodb数据库/6.mongodb的权限管理.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.6.</b>
+                        
+                        mongodb的权限管理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="06-mongodb数据库/7.mongodb和python交互.html">
+            
+                
+                    <a href="../06-mongodb数据库/7.mongodb和python交互.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.7.</b>
+                        
+                        mongodb和python交互
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="06-mongodb数据库/8.mongodb总结图.html">
+            
+                
+                    <a href="../06-mongodb数据库/8.mongodb总结图.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.8.</b>
+                        
+                        mongdb总结
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="07-scrapy爬虫框架/index.html">
+            
+                
+                    <a href="../07-scrapy爬虫框架/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        scrapy爬虫框架
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="07-scrapy爬虫框架/1.scrapy的概念作用和工作流程.html">
+            
+                
+                    <a href="../07-scrapy爬虫框架/1.scrapy的概念作用和工作流程.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        scrapy的概念作用和工作流程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="07-scrapy爬虫框架/2.scrapy的入门使用.html">
+            
+                
+                    <a href="../07-scrapy爬虫框架/2.scrapy的入门使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        scrapy的入门使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="07-scrapy爬虫框架/3.scrapy构造并发送请求.html">
+            
+                
+                    <a href="../07-scrapy爬虫框架/3.scrapy构造并发送请求.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        scrapy数据建模与请求
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="07-scrapy爬虫框架/4.scrapy模拟登陆.html">
+            
+                
+                    <a href="../07-scrapy爬虫框架/4.scrapy模拟登陆.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        scrapy模拟登陆
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="07-scrapy爬虫框架/5.scrapy管道的使用.html">
+            
+                
+                    <a href="../07-scrapy爬虫框架/5.scrapy管道的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.</b>
+                        
+                        scrapy管道的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="07-scrapy爬虫框架/14.crawlspider类的使用.html">
+            
+                
+                    <a href="../07-scrapy爬虫框架/14.crawlspider类的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.6.</b>
+                        
+                        crawlspider的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="07-scrapy爬虫框架/6.scrapy中间件的使用.html">
+            
+                
+                    <a href="../07-scrapy爬虫框架/6.scrapy中间件的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.</b>
+                        
+                        scrapy中间件的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="07-scrapy爬虫框架/7.scrapy_redis概念作用和流程.html">
+            
+                
+                    <a href="../07-scrapy爬虫框架/7.scrapy_redis概念作用和流程.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.8.</b>
+                        
+                        scrapy_redis概念作用和流程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.9" data-path="07-scrapy爬虫框架/8.scrapy_redis原理分析并实现断点续爬以及分布式爬虫.html">
+            
+                
+                    <a href="../07-scrapy爬虫框架/8.scrapy_redis原理分析并实现断点续爬以及分布式爬虫.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.9.</b>
+                        
+                        scrapy_redis原理分析并实现断点续爬以及分布式爬虫
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.10" data-path="07-scrapy爬虫框架/9.scrapy_splash组件的使用.html">
+            
+                
+                    <a href="../07-scrapy爬虫框架/9.scrapy_splash组件的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.10.</b>
+                        
+                        scrapy_splash组件的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.11" data-path="07-scrapy爬虫框架/10.scrapy的日志信息与配置.html">
+            
+                
+                    <a href="../07-scrapy爬虫框架/10.scrapy的日志信息与配置.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.11.</b>
+                        
+                        scrapy的日志信息与配置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.12" data-path="07-scrapy爬虫框架/11.scrapyd部署scrapy项目.html">
+            
+                
+                    <a href="../07-scrapy爬虫框架/11.scrapyd部署scrapy项目.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.12.</b>
+                        
+                        scrapyd部署scrapy项目
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.13" data-path="07-scrapy爬虫框架/12.gerapy爬虫管理.html">
+            
+                
+                    <a href="../07-scrapy爬虫框架/12.gerapy爬虫管理.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.13.</b>
+                        
+                        使用gerapy进行爬虫管理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.14" data-path="07-scrapy爬虫框架/13.scrapy总结图.html">
+            
+                
+                    <a href="../07-scrapy爬虫框架/13.scrapy总结图.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.14.</b>
+                        
+                        scrapy总结图
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="08-appium的使用/index.html">
+            
+                
+                    <a href="../08-appium的使用/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        appium的使用
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="08-appium的使用/1.appium环境安装.html">
+            
+                
+                    <a href="../08-appium的使用/1.appium环境安装.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        appium环境安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="8.2" data-path="08-appium的使用/2.利用appium自动控制移动设备并提取数据.html">
+            
+                
+                    <a href="../08-appium的使用/2.利用appium自动控制移动设备并提取数据.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        利用appium自动控制移动设备并提取数据
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >爬虫课程概要</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="&#x5229;&#x7528;appium&#x81EA;&#x52A8;&#x63A7;&#x5236;&#x79FB;&#x52A8;&#x8BBE;&#x5907;&#x5E76;&#x63D0;&#x53D6;&#x6570;&#x636E;">&#x5229;&#x7528;appium&#x81EA;&#x52A8;&#x63A7;&#x5236;&#x79FB;&#x52A8;&#x8BBE;&#x5907;&#x5E76;&#x63D0;&#x53D6;&#x6570;&#x636E;</h2>
+<h5 id="&#x5B66;&#x4E60;&#x76EE;&#x6807;">&#x5B66;&#x4E60;&#x76EE;&#x6807;</h5>
+<ol>
+<li>&#x4E86;&#x89E3; appium-python-client&#x6A21;&#x5757;&#x5B9A;&#x4F4D;&#x5143;&#x7D20;&#x4EE5;&#x53CA;&#x63D0;&#x53D6;&#x5176;&#x6587;&#x672C;&#x5185;&#x5BB9;&#x7684;&#x65B9;&#x6CD5;</li>
+<li>&#x4E86;&#x89E3; appium-python-client&#x6A21;&#x5757;&#x63A7;&#x5236;&#x6ED1;&#x52A8;&#x52A8;&#x4F5C;&#x7684;&#x65B9;&#x6CD5;</li>
+</ol>
+<hr>
+<blockquote>
+<p>&#x4EE5;&#x63A7;&#x5236;&#x6296;&#x97F3;app&#x6ED1;&#x52A8;&#x5E76;&#x83B7;&#x53D6;&#x6296;&#x97F3;&#x77ED;&#x89C6;&#x9891;&#x53D1;&#x5E03;&#x8005;&#x6635;&#x79F0;&#x548C;&#x70B9;&#x8D5E;&#x6570;&#x7B49;&#x4FE1;&#x606F;&#x4E3A;&#x4F8B;</p>
+</blockquote>
+<h3 id="21-&#x5B89;&#x88C5;appiumpythonclient&#x6A21;&#x5757;&#x5E76;&#x542F;&#x52A8;&#x5DF2;&#x5B89;&#x88C5;&#x597D;&#x7684;&#x73AF;&#x5883;">2.1 &#x5B89;&#x88C5;appium-python-client&#x6A21;&#x5757;&#x5E76;&#x542F;&#x52A8;&#x5DF2;&#x5B89;&#x88C5;&#x597D;&#x7684;&#x73AF;&#x5883;</h3>
+<h4 id="211-&#x5B89;&#x88C5;appiumpythonclient&#x6A21;&#x5757;">2.1.1 &#x5B89;&#x88C5;appium-python-client&#x6A21;&#x5757;</h4>
+<p>&#x5728;window&#x7684;&#x865A;&#x62DF;&#x73AF;&#x5883;&#x4E0B;&#x6267;&#x884C;<code>pip install appium-python-client</code></p>
+<h4 id="212-&#x542F;&#x52A8;&#x591C;&#x795E;&#x6A21;&#x62DF;&#x5668;&#xFF0C;&#x8FDB;&#x5165;&#x591C;&#x795E;&#x6A21;&#x62DF;&#x5668;&#x6240;&#x5728;&#x7684;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;&#x7684;bin&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x8FDB;&#x5165;cmd&#x7EC8;&#x7AEF;&#xFF0C;&#x4F7F;&#x7528;adb&#x547D;&#x4EE4;&#x5EFA;&#x7ACB;adb-server&#x548C;&#x6A21;&#x62DF;&#x5668;&#x7684;&#x8FDE;&#x63A5;">2.1.2 &#x542F;&#x52A8;&#x591C;&#x795E;&#x6A21;&#x62DF;&#x5668;&#xFF0C;&#x8FDB;&#x5165;&#x591C;&#x795E;&#x6A21;&#x62DF;&#x5668;&#x6240;&#x5728;&#x7684;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;&#x7684;bin&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x8FDB;&#x5165;cmd&#x7EC8;&#x7AEF;&#xFF0C;&#x4F7F;&#x7528;adb&#x547D;&#x4EE4;&#x5EFA;&#x7ACB;adb server&#x548C;&#x6A21;&#x62DF;&#x5668;&#x7684;&#x8FDE;&#x63A5;</h4>
+<ol>
+<li><code>adb devices</code></li>
+</ol>
+<pre><code>C:\Program Files (x86)\Nox\bin&gt;adb devices
+List of devices attached
+* daemon not running; starting now at tcp:5037
+* daemon started successfully
+</code></pre><ol>
+<li><code>nox_adb.exe connect 127.0.0.1:62001</code></li>
+</ol>
+<pre><code>C:\Program Files (x86)\Nox\bin&gt;nox_adb.exe connect 127.0.0.1:62001
+already connected to 127.0.0.1:62001
+</code></pre><ol>
+<li><code>adb devices</code></li>
+</ol>
+<pre><code>C:\Program Files (x86)\Nox\bin&gt;adb devices
+List of devices attached
+127.0.0.1:62001 device
+</code></pre><h4 id="213-&#x542F;&#x52A8;appiumdesktop&#xFF0C;&#x70B9;&#x51FB;start-server&#x542F;&#x52A8;appium&#x670D;&#x52A1;">2.1.3 &#x542F;&#x52A8;appium-desktop&#xFF0C;&#x70B9;&#x51FB;start server&#x542F;&#x52A8;appium&#x670D;&#x52A1;</h4>
+<pre><code>[Appium] Welcome to Appium v1.10.0
+[Appium] Appium REST http interface listener started on 0.0.0.0:4723
+</code></pre><h4 id="214-&#x5229;&#x7528;&#x4E0A;&#x4E00;&#x5C0F;&#x8282;&#x6240;&#x5B66;&#x4E60;&#x7684;&#x5185;&#x5BB9;&#x83B7;&#x53D6;desired-capabilities&#x53C2;&#x6570;">2.1.4 &#x5229;&#x7528;&#x4E0A;&#x4E00;&#x5C0F;&#x8282;&#x6240;&#x5B66;&#x4E60;&#x7684;&#x5185;&#x5BB9;&#x83B7;&#x53D6;Desired Capabilities&#x53C2;&#x6570;</h4>
+<ol>
+<li>&#x83B7;&#x53D6;&#x6A21;&#x62DF;&#x8BBE;&#x5907;&#x7684;&#x578B;&#x53F7;<ul>
+<li>&#x6253;&#x5F00;&#x8BBE;&#x7F6E;&#x2014;&#x2014;&#x5173;&#x4E8E;&#x5E73;&#x677F;&#x7535;&#x8111;</li>
+<li>&#x67E5;&#x770B;&#x578B;&#x53F7;&#xFF0C;&#x83B7;&#x53D6;&#x6A21;&#x62DF;&#x8BBE;&#x5907;&#x7684;&#x578B;&#x53F7;</li>
+</ul>
+</li>
+<li>&#x83B7;&#x53D6;app&#x5305;&#x540D;&#x79F0; &#x4EE5;&#x53CA; app&#x8FDB;&#x7A0B;&#x540D;<ul>
+<li>&#x6253;&#x5F00;&#x6A21;&#x62DF;&#x5668;&#x4E2D;&#x7684;&#x6296;&#x97F3;&#x77ED;&#x89C6;&#x9891;app</li>
+<li>&#x5728;adb&#x8FDE;&#x63A5;&#x6B63;&#x786E;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5728;&#x591C;&#x795E;&#x6A21;&#x62DF;&#x5668;&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x7684;bin&#x76EE;&#x5F55;&#x4E0B;&#x7684;cmd&#x4E2D;&#x8F93;&#x5165;<code>adb shell</code></li>
+<li>&#x8FDB;&#x5165;adb shell&#x540E;&#x8F93;&#x5165; <code>dumpsys activity | grep mFocusedActivity</code></li>
+<li><code>`com.ss.android.ugc.aweme</code>&#x5C31;&#x662F;app&#x5305;&#x540D;</li>
+<li><code>.main.MainActivity</code>&#x5C31;&#x662F;&#x8FDB;&#x7A0B;&#x540D; &#x6CE8;&#x610F;&#x524D;&#x8FB9;&#x6709;&#x4E2A;&#x70B9;.</li>
+</ul>
+</li>
+</ol>
+<h3 id="22-&#x521D;&#x59CB;&#x5316;&#x4EE5;&#x53CA;&#x83B7;&#x53D6;&#x79FB;&#x52A8;&#x8BBE;&#x5907;&#x5206;&#x8FA8;&#x7387;">2.2 &#x521D;&#x59CB;&#x5316;&#x4EE5;&#x53CA;&#x83B7;&#x53D6;&#x79FB;&#x52A8;&#x8BBE;&#x5907;&#x5206;&#x8FA8;&#x7387;</h3>
+<blockquote>
+<p>&#x5B8C;&#x6210;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF0C;&#x5E76;&#x8FD0;&#x884C;&#x4EE3;&#x7801;&#x67E5;&#x770B;&#x6548;&#x679C;&#xFF1A;&#x5982;&#x679C;&#x6A21;&#x62DF;&#x5668;&#x4E2D;&#x6296;&#x97F3;app&#x88AB;&#x542F;&#x52A8;&#xFF0C;&#x5E76;&#x6253;&#x5370;&#x51FA;&#x6A21;&#x62DF;&#x8BBE;&#x5907;&#x7684;&#x5206;&#x8FA8;&#x7387;&#x5219;&#x6210;&#x529F;</p>
+</blockquote>
+<pre><code>from appium import webdriver
+
+# &#x521D;&#x59CB;&#x5316;&#x914D;&#x7F6E;&#xFF0C;&#x8BBE;&#x7F6E;Desired Capabilities&#x53C2;&#x6570;
+desired_caps = {
+    &apos;platformName&apos;: &apos;Android&apos;,
+    &apos;deviceName&apos;: &apos;SM-G955F&apos;,
+    &apos;appPackage&apos;: &apos;com.ss.android.ugc.aweme&apos;,
+    &apos;appActivity&apos;: &apos;.main.MainActivity&apos;
+}
+# &#x6307;&#x5B9A;Appium Server
+server = &apos;http://localhost:4723/wd/hub&apos;
+# &#x65B0;&#x5EFA;&#x4E00;&#x4E2A;driver
+driver = webdriver.Remote(server, desired_caps)
+# &#x83B7;&#x53D6;&#x6A21;&#x62DF;&#x5668;/&#x624B;&#x673A;&#x7684;&#x5206;&#x8FA8;&#x7387;(px)
+width = driver.get_window_size()[&apos;width&apos;]
+height = driver.get_window_size()[&apos;height&apos;]
+print(width, height)
+</code></pre><ul>
+<li><p>&#x79FB;&#x52A8;&#x8BBE;&#x5907;&#x5206;&#x8FA8;&#x7387;</p>
+<ul>
+<li><p>driver.get_window_size()[&apos;width&apos;]</p>
+</li>
+<li><p>driver.get_window_size()[&apos;height&apos;]</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="23-&#x5B9A;&#x4F4D;&#x5143;&#x7D20;&#x4EE5;&#x53CA;&#x63D0;&#x53D6;&#x6587;&#x672C;&#x7684;&#x65B9;&#x6CD5;">2.3 &#x5B9A;&#x4F4D;&#x5143;&#x7D20;&#x4EE5;&#x53CA;&#x63D0;&#x53D6;&#x6587;&#x672C;&#x7684;&#x65B9;&#x6CD5;</h3>
+<h4 id="231-&#x70B9;&#x51FB;appium-desktop&#x53F3;&#x4E0A;&#x89D2;&#x7684;&#x653E;&#x5927;&#x955C;&#x56FE;&#x6807;">2.3.1 &#x70B9;&#x51FB;appium desktop&#x53F3;&#x4E0A;&#x89D2;&#x7684;&#x653E;&#x5927;&#x955C;&#x56FE;&#x6807;</h4>
+<blockquote>
+<p>&#x5982;&#x56FE;&#x586B;&#x5199;&#x914D;&#x7F6E;&#xFF0C;&#x5E76;&#x70B9;&#x51FB;start session</p>
+</blockquote>
+<p><img src="images/appium-session&#x914D;&#x7F6E;.png" alt="appium-session&#x914D;&#x7F6E;"></p>
+<h4 id="232-&#x5B9A;&#x4F4D;&#x754C;&#x9762;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;">2.3.2 &#x5B9A;&#x4F4D;&#x754C;&#x9762;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;</h4>
+<p><img src="images/2-3-2-appiumDesktop&#x5B9A;&#x4F4D;&#x754C;&#x9762;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;.jpg" alt="2-3-2-appiumDesktop&#x5B9A;&#x4F4D;&#x754C;&#x9762;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;"></p>
+<h4 id="233-&#x70B9;&#x51FB;&#x77ED;&#x89C6;&#x9891;&#x7684;&#x4F5C;&#x8005;&#x540D;&#x5B57;&#xFF0C;&#x67E5;&#x770B;&#x5E76;&#x83B7;&#x53D6;&#x8BE5;&#x5143;&#x7D20;&#x7684;id">2.3.3 &#x70B9;&#x51FB;&#x77ED;&#x89C6;&#x9891;&#x7684;&#x4F5C;&#x8005;&#x540D;&#x5B57;&#xFF0C;&#x67E5;&#x770B;&#x5E76;&#x83B7;&#x53D6;&#x8BE5;&#x5143;&#x7D20;&#x7684;id</h4>
+<p><img src="images/&#x5143;&#x7D20;&#x5B9A;&#x4F4D;.png" alt="&#x5143;&#x7D20;&#x5B9A;&#x4F4D;"></p>
+<h4 id="234-&#x5728;python&#x4F7F;&#x7528;&#x4EE3;&#x7801;&#x901A;&#x8FC7;&#x5143;&#x7D20;id&#x83B7;&#x53D6;&#x8BE5;&#x5143;&#x7D20;&#x7684;&#x6587;&#x672C;&#x5185;&#x5BB9;">2.3.4 &#x5728;python&#x4F7F;&#x7528;&#x4EE3;&#x7801;&#x901A;&#x8FC7;&#x5143;&#x7D20;id&#x83B7;&#x53D6;&#x8BE5;&#x5143;&#x7D20;&#x7684;&#x6587;&#x672C;&#x5185;&#x5BB9;</h4>
+<blockquote>
+<p>&#x5B9E;&#x4F8B;&#x5316;appium driver&#x5BF9;&#x8C61;&#x540E;&#x6DFB;&#x52A0;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#xFF0C;&#x8FD0;&#x884C;&#x5E76;&#x67E5;&#x770B;&#x6548;&#x679C;</p>
+</blockquote>
+<pre><code># &#x83B7;&#x53D6;&#x89C6;&#x9891;&#x7684;&#x5404;&#x79CD;&#x4FE1;&#x606F;&#xFF1A;&#x4F7F;&#x7528;appium desktop&#x5B9A;&#x4F4D;&#x5143;&#x7D20;
+print(driver.find_element_by_id(&apos;bc&apos;).text)  # &#x53D1;&#x5E03;&#x8005;&#x540D;&#x5B57;
+print(driver.find_element_by_id(&apos;al9&apos;).text)  # &#x70B9;&#x8D5E;&#x6570;
+print(driver.find_element_by_id(&apos;al_&apos;).text)  # &#x7559;&#x8A00;&#x6570;
+print(driver.find_element_by_id(&apos;a23&apos;).text)  # &#x89C6;&#x9891;&#x540D;&#x5B57;&#xFF0C;&#x53EF;&#x80FD;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x62A5;&#x9519;
+</code></pre><ul>
+<li><p>&#x5B9A;&#x4F4D;&#x5143;&#x7D20;&#x53CA;&#x83B7;&#x53D6;&#x5176;&#x6587;&#x672C;&#x5185;&#x5BB9;&#x7684;&#x65B9;&#x6CD5;</p>
+<ul>
+<li>driver.find_element_by_id(&#x5143;&#x7D20;&#x7684;id).text</li>
+<li>driver.find_element_by_xpath(&#x5B9A;&#x4F4D;&#x5143;&#x7D20;&#x7684;xpath&#x89C4;&#x5219;).text</li>
+</ul>
+</li>
+</ul>
+<h3 id="24-&#x63A7;&#x5236;&#x6296;&#x97F3;app&#x6ED1;&#x52A8;">2.4 &#x63A7;&#x5236;&#x6296;&#x97F3;app&#x6ED1;&#x52A8;</h3>
+<h4 id="241-appium&#x6ED1;&#x52A8;&#x7684;&#x51FD;&#x6570;">2.4.1 appium&#x6ED1;&#x52A8;&#x7684;&#x51FD;&#x6570;</h4>
+<blockquote>
+<p>&#x4ECE;(start_x, start_y)&#x6ED1;&#x52A8;&#x5230;(end_x, end_y)</p>
+</blockquote>
+<ul>
+<li>driver.swipe(start_x, start_y, end_x, end_y)</li>
+</ul>
+<h4 id="242--&#x63A7;&#x5236;&#x6296;&#x97F3;app&#x6ED1;&#x52A8;&#x7684;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;">2.4.2  &#x63A7;&#x5236;&#x6296;&#x97F3;app&#x6ED1;&#x52A8;&#x7684;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;</h4>
+<pre><code>start_x = width // 2  # &#x6ED1;&#x52A8;&#x7684;&#x8D77;&#x59CB;&#x70B9;&#x7684;x&#x5750;&#x6807;&#xFF0C;&#x5C4F;&#x5E55;&#x5BBD;&#x5EA6;&#x4E2D;&#x5FC3;&#x70B9;
+start_y = height // 3 * 2  # &#x6ED1;&#x52A8;&#x7684;&#x8D77;&#x59CB;&#x70B9;&#x7684;y&#x5750;&#x6807;&#xFF0C;&#x5C4F;&#x5E55;&#x9AD8;&#x5EA6;&#x4ECE;&#x4E0A;&#x5F00;&#x59CB;&#x5230;&#x4E0B;&#x4E09;&#x5206;&#x4E4B;&#x4E8C;&#x5904;
+distance = height // 2  # y&#x8F74;&#x6ED1;&#x52A8;&#x8DDD;&#x79BB;&#xFF1A;&#x5C4F;&#x5E55;&#x9AD8;&#x5EA6;&#x4E00;&#x534A;&#x7684;&#x8DDD;&#x79BB;
+end_x = start_x # &#x6ED1;&#x52A8;&#x7684;&#x7EC8;&#x70B9;&#x7684;x&#x5750;&#x6807;
+end_y = start_y-distance # &#x6ED1;&#x52A8;&#x7684;&#x7EC8;&#x70B9;&#x7684;y&#x5750;&#x6807;
+# &#x6ED1;&#x52A8;
+driver.swipe(start_x, start_y, end_x, end_y)
+</code></pre><h3 id="25-&#x6574;&#x7406;&#x5E76;&#x5B8C;&#x6210;&#x81EA;&#x52A8;&#x6ED1;&#x52A8;&#x7684;&#x4EE3;&#x7801;">2.5 &#x6574;&#x7406;&#x5E76;&#x5B8C;&#x6210;&#x81EA;&#x52A8;&#x6ED1;&#x52A8;&#x7684;&#x4EE3;&#x7801;</h3>
+<pre><code>import time
+from appium import webdriver
+
+
+class DouyinAction():
+    &quot;&quot;&quot;&#x81EA;&#x52A8;&#x6ED1;&#x52A8;&#xFF0C;&#x5E76;&#x83B7;&#x53D6;&#x6296;&#x97F3;&#x77ED;&#x89C6;&#x9891;&#x53D1;&#x5E03;&#x8005;&#x7684;id&quot;&quot;&quot;
+    def __init__(self, nums:int=None):
+        # &#x521D;&#x59CB;&#x5316;&#x914D;&#x7F6E;&#xFF0C;&#x8BBE;&#x7F6E;Desired Capabilities&#x53C2;&#x6570;
+        self.desired_caps = {
+            &apos;platformName&apos;: &apos;Android&apos;,
+            &apos;deviceName&apos;: &apos;SM-G955F&apos;,
+            &apos;appPackage&apos;: &apos;com.ss.android.ugc.aweme&apos;,
+            &apos;appActivity&apos;: &apos;.main.MainActivity&apos;
+        }
+        # &#x6307;&#x5B9A;Appium Server
+        self.server = &apos;http://localhost:4723/wd/hub&apos;
+        # &#x65B0;&#x5EFA;&#x4E00;&#x4E2A;driver
+        self.driver = webdriver.Remote(self.server, self.desired_caps)
+        # &#x83B7;&#x53D6;&#x6A21;&#x62DF;&#x5668;/&#x624B;&#x673A;&#x7684;&#x5206;&#x8FA8;&#x7387;(px)
+        width = self.driver.get_window_size()[&apos;width&apos;]
+        height = self.driver.get_window_size()[&apos;height&apos;]
+        print(width, height)
+        # &#x8BBE;&#x7F6E;&#x6ED1;&#x52A8;&#x521D;&#x59CB;&#x5750;&#x6807;&#x548C;&#x6ED1;&#x52A8;&#x8DDD;&#x79BB;
+        self.start_x = width//2 # &#x5C4F;&#x5E55;&#x5BBD;&#x5EA6;&#x4E2D;&#x5FC3;&#x70B9;
+        self.start_y = height//3*2 # &#x5C4F;&#x5E55;&#x9AD8;&#x5EA6;&#x4ECE;&#x4E0A;&#x5F00;&#x59CB;&#x5230;&#x4E0B;&#x4E09;&#x5206;&#x4E4B;&#x4E8C;&#x5904;
+        self.distance = height//2 # &#x6ED1;&#x52A8;&#x8DDD;&#x79BB;&#xFF1A;&#x5C4F;&#x5E55;&#x9AD8;&#x5EA6;&#x4E00;&#x534A;&#x7684;&#x8DDD;&#x79BB;
+        # &#x8BBE;&#x7F6E;&#x6ED1;&#x52A8;&#x6B21;&#x6570;
+        self.nums = nums
+
+    def comments(self):
+        # app&#x5F00;&#x542F;&#x4E4B;&#x540E;&#x70B9;&#x51FB;&#x4E00;&#x6B21;&#x5C4F;&#x5E55;&#xFF0C;&#x786E;&#x4FDD;&#x9875;&#x9762;&#x7684;&#x5C55;&#x793A;
+        time.sleep(2)
+        self.driver.tap([(500, 1200)], 500)
+
+    def scroll(self):
+        # &#x65E0;&#x9650;&#x6ED1;&#x52A8;
+        i = 0
+        while True:
+            # &#x6A21;&#x62DF;&#x6ED1;&#x52A8;
+            print(&apos;&#x6ED1;&#x52A8;ing...&apos;)
+            self.driver.swipe(self.start_x, self.start_y,
+                              self.start_x, self.start_y-self.distance)
+            time.sleep(1)
+            self.get_infos() # &#x83B7;&#x53D6;&#x89C6;&#x9891;&#x53D1;&#x5E03;&#x8005;&#x7684;&#x540D;&#x5B57;
+            # &#x8BBE;&#x7F6E;&#x5EF6;&#x65F6;&#x7B49;&#x5F85;
+            time.sleep(4)
+            # &#x5224;&#x65AD;&#x662F;&#x5426;&#x9000;&#x51FA;
+            if self.nums is not None and self.nums == i:
+                break
+            i += 1
+
+    def get_infos(self):
+        # &#x83B7;&#x53D6;&#x89C6;&#x9891;&#x7684;&#x5404;&#x79CD;&#x4FE1;&#x606F;&#xFF1A;&#x4F7F;&#x7528;appium desktop&#x5B9A;&#x4F4D;&#x5143;&#x7D20;
+        print(self.driver.find_element_by_id(&apos;bc&apos;).text) # &#x53D1;&#x5E03;&#x8005;&#x540D;&#x5B57;
+        print(self.driver.find_element_by_id(&apos;al9&apos;).text) # &#x70B9;&#x8D5E;&#x6570;
+        print(self.driver.find_element_by_id(&apos;al_&apos;).text) # &#x7559;&#x8A00;&#x6570;
+        print(self.driver.find_element_by_id(&apos;a23&apos;).text) # &#x89C6;&#x9891;&#x540D;&#x5B57;&#xFF0C;&#x53EF;&#x80FD;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x62A5;&#x9519;
+
+        # # &#x70B9;&#x51FB;&#x3010;&#x5206;&#x4EAB;&#x3011;&#x5750;&#x6807;&#x4F4D;&#x7F6E; 671,1058
+        # self.driver.tap([(671, 1058)])
+        # time.sleep(2)
+        # # &#x5411;&#x5DE6;&#x6ED1;&#x52A8;&#x9732;&#x51FA; &#x3010;&#x590D;&#x5236;&#x94FE;&#x63A5;&#x3011; 580&#xFF0C;1100 --&gt; 200, 1100
+        # self.driver.swipe(580,1100, 20, 200, 1100)
+        # # self.driver.get_screenshot_as_file(&apos;./a.png&apos;) # &#x622A;&#x56FE;
+        # # &#x70B9;&#x51FB;&#x3010;&#x590D;&#x5236;&#x94FE;&#x63A5;&#x3011; &#x8DDD;&#x79BB;&#x53F3;&#x8FB9;60 &#x8DDD;&#x79BB;&#x5E95;&#x8FB9;170 720-60&#xFF0C;1280-170
+        # self.driver.tap([(660, 1110)])
+        # # self.driver.get_screenshot_as_file(&apos;./b.png&apos;)  # &#x622A;&#x56FE;
+
+    def main(self):
+        self.comments() # &#x70B9;&#x51FB;&#x4E00;&#x6B21;&#x5C4F;&#x5E55;&#xFF0C;&#x786E;&#x4FDD;&#x9875;&#x9762;&#x7684;&#x5C55;&#x793A;
+        time.sleep(2)
+        self.scroll() # &#x6ED1;&#x52A8;
+
+
+if __name__ == &apos;__main__&apos;:
+
+    action = DouyinAction(nums=5)
+    action.main()
+</code></pre><blockquote>
+<p>&#x81F3;&#x6B64;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x722C;&#x866B;5.0&#x8BFE;&#x7A0B;&#x9879;&#x76EE;&#x5E93;&#xFF0C;&#x4F7F;&#x7528;fiddler&#x7B49;&#x6293;&#x5305;&#x5DE5;&#x5177;&#xFF0C;&#x5229;&#x7528;appium+mitmproxy+wget&#x7B49;python&#x6A21;&#x5757;&#x81EA;&#x52A8;&#x83B7;&#x53D6;&#x6296;&#x97F3;&#x89C6;&#x9891;&#x6587;&#x4EF6;</p>
+</blockquote>
+<h3 id="26-&#x5173;&#x4E8E;&#x6A21;&#x62DF;&#x5F0F;&#x79FB;&#x52A8;&#x7AEF;&#x722C;&#x866B;&#x7684;&#x53C2;&#x8003;&#x9605;&#x8BFB;">2.6 &#x5173;&#x4E8E;&#x6A21;&#x62DF;&#x5F0F;&#x79FB;&#x52A8;&#x7AEF;&#x722C;&#x866B;&#x7684;&#x53C2;&#x8003;&#x9605;&#x8BFB;</h3>
+<ol>
+<li><p><a href="https://zhuanlan.zhihu.com/appium" target="_blank">https://zhuanlan.zhihu.com/appium</a>  # &#x4F60;&#x4EEC;&#x731C;&#x8FD9;&#x662F;&#x8C01;&#x5199;&#x7684;&#xFF0C;&#x4E0D;&#x670D;&#x4F60;&#x4EEC;&#x4E5F;&#x5199;&#xFF0C;&#x4EE5;&#x540E;&#x8BFE;&#x4EF6;&#x5C31;&#x7528;&#x54B1;&#x4EEC;&#x73ED;&#x540C;&#x5B66;&#x7684;&#xFF01;</p>
+</li>
+<li><p><a href="https://github.com/butomo1989/docker-android" target="_blank">https://github.com/butomo1989/docker-android</a></p>
+</li>
+<li><p><a href="https://blog.csdn.net/weixin_42620645/article/details/83828863" target="_blank">https://blog.csdn.net/weixin_42620645/article/details/83828863</a></p>
+</li>
+<li><p><a href="https://blog.csdn.net/weixin_39211232/article/details/83410130#Android_16" target="_blank">https://blog.csdn.net/weixin_39211232/article/details/83410130#Android_16</a></p>
+</li>
+<li><p><a href="https://www.jianshu.com/p/bf1ca3d4ac76" target="_blank">https://www.jianshu.com/p/bf1ca3d4ac76</a></p>
+</li>
+<li><p><a href="http://www.testclass.net/appium/" target="_blank">http://www.testclass.net/appium/</a></p>
+</li>
+</ol>
+<hr>
+<h5 id="&#x5C0F;&#x7ED3;">&#x5C0F;&#x7ED3;</h5>
+<ol>
+<li>&#x4E86;&#x89E3; appium-python-client&#x6A21;&#x5757;&#x5B9A;&#x4F4D;&#x5143;&#x7D20;&#x4EE5;&#x53CA;&#x63D0;&#x53D6;&#x5176;&#x6587;&#x672C;&#x5185;&#x5BB9;&#x7684;&#x65B9;&#x6CD5;</li>
+<li>&#x4E86;&#x89E3; appium-python-client&#x6A21;&#x5757;&#x63A7;&#x5236;&#x6ED1;&#x52A8;&#x52A8;&#x4F5C;&#x7684;&#x65B9;&#x6CD5;</li>
+</ol>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../08-appium的使用/1.appium环境安装.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: appium环境安装"><i class="fa fa-angle-left"></i></a>
+        
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
